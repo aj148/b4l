@@ -1,0 +1,59 @@
+$(function () {
+    var bill_amt = 700;
+    
+    $('#paymentButton').click(function(){
+        var token = function(res){
+         $("#stripe_token").val(res.id);
+         $("form").submit();
+        };
+        <% if ENV['B4L_STRIPE_PUBLISHABLE_KEY'].blank? %>
+        <% raise "ENV variable not set for stripe key! If you're on heroku,
+        try this: https://devcenter.heroku.com/articles/labs-user-env-compile" %>
+        <% end %>
+        StripeCheckout.open({
+            key:         "<%= ENV['B4L_STRIPE_PUBLISHABLE_KEY'] %>",
+            amount:      bill_amt,
+            name:        '1 Bracket to Support SIDS Research',
+            panelLabel:  'Donate',
+            token:       token
+        });
+
+        return false;
+    });
+
+    $('select.opts').on('change', function() {
+        var total = parseInt(this.value,10) + 2;
+        $('#amt_shown').text("$"+total+".00");
+        bill_amt = total * 100;
+        $("#payment_amt").val(bill_amt);
+    });
+
+    $('#donateButton').click(function(){
+        var token = function(res){
+            $("#stripe_token").val(res.id);
+            $("form").submit();
+            //console.log('Got token ID:', res.id);
+
+        };
+        <% if ENV['B4L_STRIPE_PUBLISHABLE_KEY'].blank? %>
+        <% raise "ENV variable not set for stripe key! If you're on heroku,
+        try this: https://devcenter.heroku.com/articles/labs-user-env-compile" %>
+        <% end %>
+        StripeCheckout.open({
+            key:         "<%= ENV['B4L_STRIPE_PUBLISHABLE_KEY'] %>",
+            amount:      bill_amt,
+            name:        '1 Donation to Support SIDS Research',
+            panelLabel:  'Donate',
+            token:       token
+        });
+
+        return false;
+    });
+
+    $('select.opts_donate').on('change', function() {
+        var total = parseInt(this.value,10);
+        $('#amt_shown').text("$"+total+".00");
+        bill_amt = total * 100;
+        $("#payment_amt").val(bill_amt);
+    });
+});

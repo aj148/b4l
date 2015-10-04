@@ -1,0 +1,16 @@
+<div class="modal fade" id="new-bracket" tabindex="-1" role="dialog" aria-labelledby="new-bracket-label" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="new-bracket-label">Name your New Bracket</h4>
+			</div>
+			<div class="modal-body">
+				<%= semantic_form_for Bracket.new, :method => :post, :url => new_bracket_path do |f| %>
+				<%= f.input :name, :required => false %>
+				<%= f.action :submit, :button_html => {:class => "btn btn-primary"} %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>

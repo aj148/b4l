@@ -1,0 +1,29 @@
+<section>
+	<div class="container">
+		<h1 class="text-center">Sign up</h1>
+
+		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+		<%= devise_error_messages! %>
+
+		<div class="form-field"><%= f.label :name %>
+			<%= f.text_field :name, :autofocus => true %></div>
+
+		<div class="form-field"><%= f.label :email %>
+			<%= f.email_field :email, :autofocus => true %></div>
+
+			<div class="form-field"><%= f.label :password %>
+				<%= f.password_field :password %></div>
+
+				<div class="form-field"><%= f.label :password_confirmation %>
+					<%= f.password_field :password_confirmation %></div>
+
+					<div class="form-field"><%= f.submit "Sign up", :class => "cta btn btn-primary" %></div>
+					<% end %>
+
+					<div class="links text-center">
+						<%= render "devise/shared/links" %>
+					</div>
+					
+
+				</div>
+			</section>

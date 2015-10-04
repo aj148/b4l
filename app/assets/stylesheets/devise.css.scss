@@ -1,0 +1,40 @@
+.new_user {
+	width: 214px;
+	margin: 0 auto;
+	.form-field {
+		margin-bottom: 20px;
+	}
+}
+
+.links {
+	width: 214px;
+	margin: 0 auto;
+	font-weight: 700;
+}
+
+#error_explanation {
+	padding: 10px;
+	background-color: #f2dede;
+	border-left: #d9534f 5px solid;
+	margin-bottom: 20px;
+	h2 {
+		color: #d9534f;
+		margin-top: 0;
+		font-size: 16px;
+	}
+	ul {
+		margin-bottom: 0;
+	}
+}
+
+.field_with_errors {
+	color: #d9534f;
+	input {
+		color: black;
+	}
+}
+
+.cta {
+	display: block;
+	margin: 0 auto;
+}

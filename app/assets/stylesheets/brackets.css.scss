@@ -1,0 +1,419 @@
+// TODO:
+//  - make use of variables and clever math to make this more dynamic (mostly done)
+//  - make everything prettier (or at least less plain)
+
+
+// --- CHANGABLE VARIABLES ----
+$bracket-width: 1200px;
+$bracket-font-size: 11px;
+$bracket-line-height: 13px;
+$game-padding: 5px;
+$game-width: 95px;
+$region-margin-top: 60px;
+$r1-game-height: 28px;
+$r1-game-margin-bottom: 25px;
+$r1-team2-margin-top: ($r1-game-height - $bracket-line-height) - 1px;
+
+// --- DEPENDENT VARIABLES ---
+// (will update automatically based on above)
+
+// round2
+$r2-game-height: $r1-game-height + $r1-game-margin-bottom + 1px;
+$r2-game-margin-bottom: $r1-game-margin-bottom + $r1-game-height - 1px;
+$r2-game-margin-top: $r1-game-height/2;
+$r2-team2-margin-top: ($r2-game-height - $bracket-line-height) - 1px;
+
+// round3
+$r3-game-height: $r2-game-height + $r2-game-margin-bottom + 1px;
+$r3-game-margin-bottom: $r2-game-margin-bottom + $r2-game-height - 1px;
+$r3-game-margin-top: $r1-game-height/2 + $r2-game-height/2;
+$r3-team2-margin-top: ($r3-game-height - $bracket-line-height) - 1px;
+
+// round4
+$r4-game-height: $r3-game-height + $r3-game-margin-bottom + 1px;
+$r4-game-margin-bottom: $r3-game-margin-bottom + $r3-game-height - 1px;
+$r4-game-margin-top: $r1-game-height/2 + $r2-game-height/2 + $r3-game-height/2;
+$r4-team2-margin-top: ($r4-game-height - $bracket-line-height) - 1px;
+
+// region-winner
+$region-winner-margin-top: $r1-game-height/2 + $r2-game-height/2 + $r3-game-height/2 + $r4-game-height/2 - $bracket-line-height;
+
+// final four
+$final-four-margin-top: -($r1-game-height*8 + $r1-game-margin-bottom*7);
+$final-four-width: $bracket-width - 10*($game-width);
+$final-four-inner-height: $r1-game-height*8 + $r1-game-margin-bottom*7 + $region-margin-top + 1px;
+$final-four-inner-margin-top: $r1-game-height/2 + $r2-game-height/2 + $r3-game-height/2 + $r4-game-height/2 + $bracket-font-size - 1px;
+
+
+// ------- END VARIABLES ---------
+
+.bracket-buttons {
+	.btn-default {
+		&:focus {
+			color: #333333 !important;
+			background-color: white !important;
+			border-color: #cccccc !important;
+		}
+		&:active, &:hover {
+			color: #333333 !important;
+			background-color: #ebebeb !important;
+			border-color: #adadad !important;
+		}
+	}
+}
+
+.bracket-name {
+	margin-top: 40px;
+}
+
+.bracket {
+	top: -50px;
+	position: relative;
+	width: $bracket-width;
+	margin: 0 auto;
+	font-size: $bracket-font-size;
+	line-height: $bracket-line-height;
+	ul, li {
+		margin: 0;
+		padding: 0;
+		font-size: $bracket-font-size;
+		line-height: $bracket-line-height;
+	}
+	margin-bottom: 60px;
+	padding: 0;
+	//overflow: scroll;
+}
+
+// hacky fix for the bracket form with the same class
+form.bracket {
+	width: auto;
+	top: 0;
+}
+
+.region {
+	margin-top: $region-margin-top;
+}
+
+.region#region0, .region#region1 {
+	float: left;
+	text-align: left;
+	ul.round {
+		float: left;
+	}
+	clear: left;
+	li.game {
+		border-left: none;
+	}
+}
+
+.region#region2, .region#region3 {
+	float: right;
+	text-align: right;
+	ul.round {
+		float: right;
+	}
+	clear: right;
+	li.game {
+		border-right: none;
+	}
+}
+
+.region {
+	position: relative;
+	* {
+		position: relative;
+		z-index: 100;
+	}
+}
+
+.region#region2 {
+	margin-top: -($r1-game-height*8 + $r1-game-margin-bottom*7);
+}
+
+.region#region0 {
+	&:before {
+		position: absolute;
+		display: block;
+		top: $r1-game-height*3.5 + $r1-game-margin-bottom*3.5 + 10px;
+		left: $game-width*2.2;
+		font-size: 32px;
+		color: #d9d9d9;
+		z-index: 10;
+	}
+}
+
+.region#region1 {
+	&:before {
+		position: absolute;
+		display: block;
+		top: $r1-game-height*3.5 + $r1-game-margin-bottom*3.5 + 10px;
+		left: $game-width*2.2;
+		font-size: 32px;
+		color: #d9d9d9;
+		z-index: 10;
+	}
+}
+
+.region#region2 {
+	&:before {
+		position: absolute;
+		display: block;
+		top: $r1-game-height*3.5 + $r1-game-margin-bottom*3.5 + 10px;
+		right: $game-width*2.2;
+		font-size: 32px;
+		color: #d9d9d9;
+		z-index: 10;
+	}
+}
+
+.region#region3 {
+	&:before {
+		position: absolute;
+		display: block;
+		top: $r1-game-height*3.5 + $r1-game-margin-bottom*3.5 + 10px;
+		right: $game-width*2.1;
+		font-size: 32px;
+		color: #d9d9d9;
+		z-index: 10;
+	}
+}
+
+.region#region0 {
+	&:before {
+		content: "South";
+	}
+}
+
+.region#region1 {
+	&:before {
+		content: "EAST";
+	}
+}
+
+.region#region2 {
+	&:before {
+		content: "WEST";
+	}
+}
+
+.region#region3 {
+	&:before {
+		content: "MIDWEST";
+	}
+}
+
+
+
+
+
+
+ul.round0 {
+	li.game {
+		height: $r1-game-height;
+		margin-bottom: $r1-game-margin-bottom;
+		ul.teams li.team1, ul.teams li.team2 {
+			&:nth-child(2) {
+				margin-top: $r1-team2-margin-top;
+			}
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+ul.round1 {
+	li.game {
+		height: $r2-game-height;
+		margin-bottom: $r2-game-margin-bottom;
+		margin-top: $r2-game-margin-top;
+		ul.teams li.team1, ul.teams li.team2 {
+			&:nth-child(2) {
+				margin-top: $r2-team2-margin-top;
+			}
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+ul.round2 {
+	li.game {
+		height: $r3-game-height;
+		margin-bottom: $r3-game-margin-bottom;
+		margin-top: $r3-game-margin-top;
+		ul.teams li.team1, ul.teams li.team2 {
+			&:nth-child(2) {
+				margin-top: $r3-team2-margin-top;
+			}
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+ul.round3 {
+	li.game {
+		height: $r4-game-height;
+		margin-bottom: $r4-game-margin-bottom;
+		margin-top: $r4-game-margin-top;
+		ul.teams li.team1, ul.teams li.team2 {
+			&:nth-child(2) {
+				margin-top: $r4-team2-margin-top;
+			}
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+li.game {
+	width: $game-width;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box;         
+	list-style: none;
+	padding: $game-padding;
+	border: 1px solid black;
+}
+
+ul.teams {
+	position: relative;
+	margin-top: -20px;
+}
+
+li.team1, li.team2 {
+	list-style: none;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	width: 100%;
+	height: $r1-game-height - $game-padding*2 - 4px;
+}
+
+.team.team-clickable {
+	color: #428bca;
+	z-index: 9999;
+	&:hover {
+		cursor: pointer;
+		color: #333333;
+		-ms-transform: scale(1.06); /* IE 9 */
+		-webkit-transform: scale(1.06); /* Chrome, Safari, Opera */
+		transform: scale(1.06);
+	}
+}
+
+li.team1, li.team2, li.region-winner, .final-four-one, .final-four-two {
+	.team-name {
+		
+	}
+	.seed {
+		color: lighten(#393939, 45%);
+	}
+}
+
+li.region-winner {
+	margin: 0;
+	list-style: none;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	width: $game-width;
+	padding: $game-padding;
+	margin-top: $region-winner-margin-top;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box;    
+	height: 24px;
+	border-bottom: 1px solid black;
+	span.team-name {
+		text-overflow: ellipsis;
+		overflow: hidden;
+		width: 80%;
+		display: block;
+		float: left;
+		margin-top: 4px;
+	}
+	span.seed {
+		display: block;
+		float: left;
+		margin-top: 4px;
+		margin-right: 3px;
+	}
+}
+
+.final-four {
+	float: left;
+	width: $final-four-width;
+	margin-top: $final-four-margin-top;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box;
+	.final-four-inner {
+		-webkit-box-sizing: border-box; 
+		-moz-box-sizing: border-box;    
+		box-sizing: border-box;
+		border-left: solid 1px black;
+		border-right: solid 1px black;
+		height: $final-four-inner-height;
+		margin-top: $final-four-inner-margin-top;
+
+
+		// ------- FIX THESE!! --------
+		.final-four-one, .final-four-two {
+			-webkit-box-sizing: border-box; 
+			-moz-box-sizing: border-box;    
+			box-sizing: border-box; 
+			padding: $game-padding;
+			border-bottom: 1px solid black;
+			width: $game-width;
+		}
+		.final-four-one {
+			margin-top: $r1-game-height*1.5 + $r1-game-margin-bottom*1.5;
+			float: left;
+			min-height: 24px;
+		}
+		.final-four-two {
+			margin-top: $r1-game-height*6.5 + $r1-game-margin-bottom*6.5;
+			float: right;
+			text-align: right;
+			min-height: 24px;
+		}
+		// --------------------------
+
+		.champion {
+			position: absolute;
+			top: $r1-game-height*8 + $r1-game-margin-bottom*8 + $region-margin-top - 30px;
+			left: 0;
+			right: 0;
+			text-align: center;
+			font-size: 18px;
+			font-weight: bold;
+			.champion-inner {
+				display: block;
+				width: 100%;
+				margin: 0 auto;
+				text-align: center;
+				.champion-image {
+					width: $game-width - 10px;
+					margin-bottom: 10px;
+				}
+			}
+		}
+
+	}
+}
+
+.bracket-error-holder {
+	min-height: 24px;
+}
+
+.bracket-error {
+	min-height: 24px;
+	p {
+		margin: 0;
+	}
+}

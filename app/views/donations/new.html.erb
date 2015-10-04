@@ -1,0 +1,38 @@
+<section class="text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h1>Thank you for supporting SIDS Research!</h1>
+				<p class="lead">Every donation will bring us one step closer to finding a cure for Sudden Infant Death Syndrome.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<form class="donation-form">
+					<label>Amount</label>
+					<select class="opts_donate">
+						<option value="5">$5</option>
+						<option value="10">$10</option>
+						<option value="20">$20</option>
+						<option value="50">$50</option>
+						<option value="100">$100</option>
+						<option value="500">$500</option>
+						<option value="1000">$1,000</option>
+						<option value="5000">$5,000</option>
+					</select>
+				</form>
+				<%= form_tag donations_path do %>
+				<input id="stripe_token" name="stripeToken" type="hidden" value="" />
+				<input id="payment_amt" name="payment_amt" type="hidden" value="" />
+				<article>
+					<label class="amount">
+						Total
+						<span id="amt_shown">$5.00</span>
+					</label>
+				</article>
+				<a href="" class="btn btn-primary hero-btn" id="donateButton">Donate</a>
+				<% end %> 
+			</div>
+		</div>
+	</div>
+</section>

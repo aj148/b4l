@@ -1,0 +1,32 @@
+<section>
+	<div class="container">
+
+	<h1 class="text-center">Choose your Winners</h1>
+	<h2 class="text-center bracket-name">
+		Bracket name: <%= @bracket.name %>
+	</h2>
+
+	<div class="text-center">
+		<div class="btn-group bracket-buttons">
+			<button type="button" class="btn btn-lg btn-default" data-target="bracket-undo">Undo</button>
+			<button type="button" class="btn btn-lg btn-default" data-target="bracket-reset">Reset</button>
+			<button type="button" class="btn btn-lg btn-default" data-target="bracket-randomize">Randomize</button>
+		</div>
+		&nbsp;&nbsp;
+		<button type="button" class="btn btn-lg btn-primary" data-target="bracket-submit">Submit</button>
+	</div>
+
+	<div class="bracket-error-holder">
+		<div class="bracket-error hidden text-center">
+			<p>Please fill out the entire bracket!</p>
+		</div>
+	</div>
+</div>
+
+	<%= render "formatted_bracket", :editable => true %>
+
+	<%= form_for @bracket, :id => "bracket-data" do |f| %>
+	<%= f.hidden_field :name %>
+	<%= f.hidden_field :predictions %>
+	<% end %>
+</section>

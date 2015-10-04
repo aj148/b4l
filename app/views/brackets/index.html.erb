@@ -1,0 +1,20 @@
+<section>
+	<div class="container">
+		<h1 class="text-center">Brackets</h1>
+
+		<div class="row">
+			<div class="col-sm">
+				<% if @brackets.any? %>
+				<%= render "brackets_table" %>
+				<% else %>
+				<p class="lead text-center">
+					The time period for creating a bracket has closed, but you can still donate!
+				</p>
+				<p class="text-center">
+					<%= link_to 'Donate', new_donation_path, :class => "btn btn-primary btn-lg" %>
+				</p>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</section>

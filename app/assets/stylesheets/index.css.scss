@@ -1,0 +1,34 @@
+.hero-wrapper {
+	display: table;
+	height: 360px;
+	.hero {
+		text-align: center;
+		display: table-cell;
+		vertical-align: middle;
+		#hero-h1 {
+			padding: 10px 0;
+			color: white;
+			font-weight: 100;
+			text-align: center;
+		}
+		.hero-btn {
+			width: 145px;
+			padding: 10px 0;
+			margin: 0 -15px;
+		}
+	}
+}
+
+.step {
+	margin: 20px 0;
+}
+
+.step-image {
+	height: 125px;
+	width: 125px;
+	background-color: #222222;
+	border-radius: 50%;
+	display: block;
+	padding: 25px;
+	margin: 10px auto;
+}
