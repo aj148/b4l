@@ -1,6 +1,6 @@
 Brackets4life::Application.routes.draw do
-
-	devise_for :users
+	
+devise_for :users
 
   # static pages
   root :to => 'static_pages#index'

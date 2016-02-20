@@ -25,6 +25,7 @@ end
 
 gem 'jquery-rails'
 gem 'devise'
+gem 'figaro'
 gem 'json'
 gem 'colored'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
