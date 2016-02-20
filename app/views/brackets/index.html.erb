@@ -8,10 +8,10 @@
 				<%= render "brackets_table" %>
 				<% else %>
 				<p class="lead text-center">
-					The time period for creating a bracket has closed, but you can still donate!
+					Welcome to the Bracket's page!
 				</p>
 				<p class="text-center">
-					<%= link_to 'Brackets', :action=>'new', :controller=>'brackets',:id=>@user %>
+					<%= link_to 'Brackets', :action=>'create', :controller=>'brackets',:id=>@user %>
 				</p>
 				<p class="text-center">
 					<%= link_to 'Donate', new_donation_path, :class => "btn btn-primary btn-lg" %>
