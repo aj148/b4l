@@ -4,7 +4,7 @@
 
 		<div class="row">
 			<div class="col-sm">
-				<% if @brackets.present? %>
+				<% if @brackets.any? %>
 				<%= render "brackets_table" %>
 				<% else %>
 				<p class="lead text-center">

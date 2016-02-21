@@ -7,8 +7,8 @@ devise_for :users
   get '/about' => 'static_pages#about'
 
   # resources
-  resources :brackets, :except => [:edit, :update, :new]
   post '/brackets/new' => 'brackets#new', :as => "new_bracket"
+  resources :brackets, :except => [:edit, :update, :new]
 
   resources :donations, only: [:new, :create]
 
