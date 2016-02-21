@@ -23,27 +23,25 @@ class BracketsController < ApplicationController
 	end
 
 	def create
-		redirect_to root_path, :notice => "The time period for creating a bracket has closed, but you can still donate!"
-		return	
-		# require 'json'
-		# @bracket = current_user.brackets.new(:name => params[:bracket][:name])
+		require 'json'
+		@bracket = current_user.brackets.new(:name => params[:bracket][:name])
 		
-		# # parse the json part of the form to create prediction objects
-		# predictions = JSON.parse params[:bracket][:predictions]
-		# predictions.each_with_index do |winner_id, slot| 
-		# 	@bracket.predictions << Prediction.new(:slot => slot, :winner_id => winner_id, :bracket => @bracket)
-		# end
+		# parse the json part of the form to create prediction objects
+		predictions = JSON.parse params[:bracket][:predictions]
+		predictions.each_with_index do |winner_id, slot| 
+			@bracket.predictions << Prediction.new(:slot => slot, :winner_id => winner_id, :bracket => @bracket)
+		end
 
-		# @bracket.save
+		@bracket.save
 
-		# if @bracket.predictions.count != 63
-		# 	flash[:notice] = "Bracket was invalid! Please try again."
-		# 	@bracket.destroy
-		# 	redirect_to brackets_path
-		# 	return
-		# end
+		if @bracket.predictions.length != 63
+			flash[:notice] = "Bracket was invalid! Please try again"
+			@bracket.destroy
+			redirect_to brackets_path
+			return
+		end
 		
-		# redirect_to new_payments_path(:bracket_id => @bracket.id)
+		redirect_to new_payments_path(:bracket_id => @bracket.id)
 	end
 
 	def show

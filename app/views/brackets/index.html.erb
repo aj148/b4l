@@ -12,10 +12,13 @@
 				</p>
 				<p class="text-center">
 					<%= link_to 'Donate', new_donation_path, :class => "btn btn-primary btn-lg" %>
-					<%= link_to 'Brackets', new_bracket_path, :class=> "btn" %>
 				</p>
 				<% end %>
 			</div>
+			<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#new-bracket">
+						Create new bracket
+					</button>
 		</div>
 	</div>
+	<%= render 'new_bracket_modal' %>
 </section>
