@@ -1,0 +1,445 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bracket",
+				"bracket_path"
+			],
+			[
+				"match",
+				"matchnum"
+			],
+			[
+				"tent",
+				"tentAverageHours"
+			],
+			[
+				"prev",
+				"prevLogTerm"
+			],
+			[
+				"pre",
+				"prevLogIndex"
+			],
+			[
+				"candi",
+				"candidateTerm"
+			],
+			[
+				"RE",
+				"REFERRED"
+			],
+			[
+				"inter",
+				"interrupt_enable"
+			],
+			[
+				"delete",
+				"deleteThreads"
+			],
+			[
+				"curren",
+				"currentThread"
+			],
+			[
+				"cur",
+				"currentSem"
+			],
+			[
+				"interrup",
+				"interrupt_enable"
+			],
+			[
+				"Curren",
+				"currentThread"
+			],
+			[
+				"current",
+				"currentThread"
+			],
+			[
+				"curre",
+				"currentThread"
+			],
+			[
+				"uc",
+				"ucontext"
+			],
+			[
+				"currn",
+				"currentThread"
+			],
+			[
+				"swap",
+				"swapcontext"
+			],
+			[
+				"interupt_",
+				"interrupt_disable"
+			],
+			[
+				"interu",
+				"interrupt_enable"
+			],
+			[
+				"fins",
+				"finished"
+			],
+			[
+				"interr",
+				"interrupt_disable"
+			],
+			[
+				"curr",
+				"currentContext"
+			],
+			[
+				"current_",
+				"Current_t"
+			],
+			[
+				"ucont",
+				"ucontext_t"
+			],
+			[
+				"de",
+				"deque"
+			],
+			[
+				"new",
+				"new_context"
+			],
+			[
+				"thre",
+				"threadNotRun"
+			],
+			[
+				"thread",
+				"threadRun"
+			],
+			[
+				"set",
+				"setcontext"
+			],
+			[
+				"n",
+				"n"
+			],
+			[
+				"ord",
+				"order_number"
+			],
+			[
+				"Ca",
+				"CASHIER_NAMES"
+			],
+			[
+				"cashi",
+				"CASHIER_NAMES"
+			],
+			[
+				"offic",
+				"official_matches"
+			],
+			[
+				"person_",
+				"person_party_votes"
+			],
+			[
+				"vot",
+				"vote_id"
+			],
+			[
+				"person",
+				"person_id"
+			],
+			[
+				"start",
+				"Start"
+			],
+			[
+				"f",
+				"FROM"
+			],
+			[
+				"Me",
+				"METADATA_T_ALIGNED"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/controllers/brackets_controller.rb",
+			"settings":
+			{
+				"buffer_size": 2097,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 367.0,
+		"selected_items":
+		[
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/arihantjain/git/workspace/sample_app/app/assets/stylesheets/application.css",
+		"/Users/arihantjain/git/workspace/sample_app/README.md",
+		"/Users/arihantjain/git/ari_b4l_1/config/local_env.yml",
+		"/Users/arihantjain/git/b4l/config/environments/development.rb",
+		"/Users/arihantjain/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/arihantjain/git/b4l/app/views/brackets/_formatted_bracket.html.erb",
+		"/Users/arihantjain/316/yelp.py",
+		"/Users/arihantjain/git/cs316_trext/server.py",
+		"/Users/arihantjain/git/cs316_trext/yelp.py",
+		"/Users/arihantjain/Downloads/schema.sql",
+		"/Users/arihantjain/316/requirements.txt",
+		"/Users/arihantjain/316/django/mysite/settings.py",
+		"/Users/arihantjain/316/2/2e.xq",
+		"/Users/arihantjain/Downloads/PS3 2/P2/2d.xq",
+		"/Users/arihantjain/Downloads/PS3 2/P2/2g.xq",
+		"/Users/arihantjain/Downloads/PS3 2/P2/2e.xq",
+		"/Users/arihantjain/Downloads/PS3 2/P2/2f.xq",
+		"/Users/arihantjain/Downloads/PS3 2/P2/2a.xq",
+		"/Users/arihantjain/Downloads/hw4 330.txt",
+		"/Users/arihantjain/git/KVilleTenting/Tenter.py",
+		"/Users/arihantjain/git/KVilleTenting/Schedule.py",
+		"/Users/arihantjain/git/KVilleTenting/Rules.py",
+		"/Users/arihantjain/git/KVilleTenting/Constants.py",
+		"/Users/arihantjain/316/example/Procfile",
+		"/Users/arihantjain/316/django/hellodjango/Procfile",
+		"/Users/arihantjain/git/KVilleTenting/hs.py",
+		"/Users/arihantjain/Dropbox/College/Projects/albeado/Burtin_plot.py",
+		"/Users/arihantjain/Dropbox/College/Projects/Schedule/Rules.py",
+		"/Users/arihantjain/Dropbox/College/Projects/Schedule/Constants.py",
+		"/Users/arihantjain/Dropbox/College/Projects/Schedule/Tenter.py",
+		"/Users/arihantjain/Dropbox/College/Projects/Schedule/Schedule.py",
+		"/Users/arihantjain/Downloads/Routine Day Setup.txt",
+		"/Users/arihantjain/Downloads/EC2 Setup.txt",
+		"/System/Library/Frameworks/IOKit.framework/Versions/A/Headers/graphics/IOGraphicsTypes.h",
+		"/Users/arihantjain/Downloads/datascience-docker-master/datascience-base/README.md",
+		"/Users/arihantjain/Desktop/test.txt",
+		"/Users/arihantjain/git/easycomm-arihant.jain/app/models/message_creator.rb",
+		"/Users/arihantjain/git/project-3/src/edu/duke/raft/FollowerMode.java",
+		"/Users/arihantjain/git/project-3/src/edu/duke/raft/CandidateMode.java",
+		"/Users/arihantjain/git/project-3/src/edu/duke/raft/LeaderMode.java",
+		"/Users/arihantjain/Downloads/Soln11.tex",
+		"/Users/arihantjain/216/size.txt",
+		"/Users/arihantjain/Downloads/cache.java",
+		"/Users/arihantjain/216/lab11/sample.py",
+		"/Users/arihantjain/216/PRoject 2/test.c",
+		"/Users/arihantjain/216/PRoject 2/shellcode.c",
+		"/Users/arihantjain/git/project2/servercode.c",
+		"/Users/arihantjain/216/PRoject 2/shellcode.cpp",
+		"/Users/arihantjain/216/hw08/congress.py",
+		"/Users/arihantjain/216/hw08/convert.py",
+		"/Users/arihantjain/216/hw08/csvjsonconverter.py",
+		"/Users/arihantjain/216/lab06/newsgroups/prepare.py",
+		"/Users/arihantjain/216/hw07/k.txt",
+		"/Users/arihantjain/216/lab06/newsgroups/classify.py",
+		"/Users/arihantjain/216/hw07/kmeans.py",
+		"/Users/arihantjain/216/lab06/newsgroups/lab.py",
+		"/Users/arihantjain/216/Team.txt",
+		"/Users/arihantjain/216/hw04/movielens/histo-movies.py",
+		"/Users/arihantjain/216/Project 1/deli.cc",
+		"/Users/arihantjain/216/Project 1/thread.h",
+		"/Users/arihantjain/216/Project 1/copy1",
+		"/Users/arihantjain/216/Project 1/2t.cc",
+		"/Users/arihantjain/216/Project 1/sw.in0",
+		"/Users/arihantjain/216/Project 1/sw.in3",
+		"/Volumes/aj148/CS 310/Project 1/deli.h",
+		"/Volumes/aj148/CS 310/Project 1/deli.cc",
+		"/Volumes/aj148/CS 310/Project 1/dthreads.h",
+		"/Users/arihantjain/216/lab04/random90-10-repeatable.sql",
+		"/Users/arihantjain/git/project-1/dthreads.h",
+		"/Users/arihantjain/216/hw04/3A.sql",
+		"/Users/arihantjain/216/hw02/1A.sql",
+		"/Users/arihantjain/216/hw02/1D.sql"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"root",
+			"heartbeat",
+			"print",
+			"println",
+			"print",
+			"pri",
+			"print",
+			"write2",
+			"write",
+			"memory",
+			"prefix",
+			"get",
+			"memset",
+			"ese",
+			"byte",
+			"\"",
+			"'",
+			"previousContext",
+			"q.",
+			"deleteT",
+			"deletet",
+			"finished",
+			"id",
+			"Sem",
+			"finished",
+			"delete_c",
+			"delete",
+			"remove",
+			"find",
+			"semap",
+			"currentcont",
+			"exec",
+			"&"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/controllers/brackets_controller.rb",
+					"settings":
+					{
+						"buffer_size": 2097,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2086,
+								2086
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 53.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/Users/arihantjain/216/hw07/k.txt"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

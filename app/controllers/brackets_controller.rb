@@ -78,6 +78,8 @@ class BracketsController < ApplicationController
 		if @bracket.user != current_user
 			render nothing: true, status: :forbidden
 		end
+		
+		logger.error "Method has failed, here are all method arguments #{args.inspect}" 
 	end
 
 end
