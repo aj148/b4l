@@ -10,7 +10,7 @@ end
 
 group :production, :staging do
   gem 'unicorn'
-#  gem 'pg'
+  #gem 'pg'
 end
 
 
@@ -25,7 +25,6 @@ end
 
 gem 'jquery-rails'
 gem 'devise'
-gem 'figaro'
 gem 'json'
 gem 'colored'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'

@@ -4,17 +4,15 @@
 
 		<div class="row">
 			<div class="col-sm">
-				<% if @brackets.any? %>
+				<% if @brackets.present? %>
 				<%= render "brackets_table" %>
 				<% else %>
 				<p class="lead text-center">
-					Welcome to the Bracket's page!
-				</p>
-				<p class="text-center">
-					<%= link_to 'Brackets', :action=>'create', :controller=>'brackets',:id=>@user %>
+					Make a new Bracket:
 				</p>
 				<p class="text-center">
 					<%= link_to 'Donate', new_donation_path, :class => "btn btn-primary btn-lg" %>
+					<%= link_to 'Brackets', new_bracket_path, :class=> "btn" %>
 				</p>
 				<% end %>
 			</div>
