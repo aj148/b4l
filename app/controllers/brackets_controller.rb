@@ -59,7 +59,7 @@ class BracketsController < ApplicationController
 	end
 
 	def destroy
-		@bracket.destroy
+		Bracket.delete(params[:id])
 		redirect_to brackets_path
 	end
 
