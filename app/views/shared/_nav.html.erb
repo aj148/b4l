@@ -18,6 +18,7 @@
         <li><%= link_to "Tournament", tournament_path%></li>
         <li><%= link_to "Prizes", prizes_path%></li>
         <li><%= link_to "Charities", charities_path%></li>
+        <li><%= link_to "Sign In", new_session_path(resource_name) %></li>
         <% if user_signed_in? %>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">

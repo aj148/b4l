@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140419232314) do
+ActiveRecord::Schema.define(:version => 20160225032820) do
 
   create_table "brackets", :force => true do |t|
     t.integer  "score"
@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(:version => 20140419232314) do
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.string   "name"
+    t.string   "charity"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
