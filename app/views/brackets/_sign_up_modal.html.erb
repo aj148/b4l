@@ -11,24 +11,39 @@
 				<%= devise_error_messages! %>
 
 				<div class="form-field"><%= f.label :name %>
-					<%= f.text_field :name, :autofocus => true %></div>
+					<%= f.text_field :name, :autofocus => true, :required => true %></div>
 
 					<div class="form-field"><%= f.label :email %>
-						<%= f.email_field :email, :autofocus => true %></div>
+						<%= f.email_field :email, :autofocus => true, :required => true %></div>
 
 						<div class="form-field"><%= f.label :password %>
-							<%= f.password_field :password %></div>
+							<%= f.password_field :password, :minlength => 8, :required => true %></div>
 
 							<div class="form-field"><%= f.label :password_confirmation %>
-								<%= f.password_field :password_confirmation %></div>
+								<%= f.password_field :password_confirmation, :required => true %></div>
 
 								<div class="form-field"><%= f.label :charity %>
-								<%= f.select(:charity, $charities) %></div>
+									<%= f.select(:charity, $charities) %></div>
 
-								<div class="form-field"><%= f.submit "Sign up", :class => "cta btn btn-primary" %></div>
-								<% end %>
-
+									<div class="form-field"><%= f.submit "Sign up", :class => "cta btn btn-primary" %></div>
+									<% end %>
+									tre
 								<!--div class="links text-center">
 									<%= render "devise/shared/links" %>
 								</div-->
 							</div>
+							<script>
+								var password = document.getElementById("user_password")
+								var confirm_password = document.getElementById("user_password_confirmation");
+
+								function validatePassword(){
+									if(password.value != confirm_password.value) {
+										confirm_password.setCustomValidity("Passwords Don't Match");
+									} else {
+										confirm_password.setCustomValidity('');
+									}
+								}
+
+								password.onchange = validatePassword;
+								confirm_password.onkeyup = validatePassword;
+								</script

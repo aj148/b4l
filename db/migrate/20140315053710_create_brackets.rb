@@ -4,7 +4,6 @@ class CreateBrackets < ActiveRecord::Migration
 			t.integer :score
 			t.string :name
 			t.integer :user_id
-
 			t.timestamps
 		end
 
