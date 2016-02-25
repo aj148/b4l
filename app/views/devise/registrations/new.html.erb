@@ -1,7 +1,7 @@
 <section>
 
 <% $charities.each do |charity| %>
-	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newUserModal" onclick="$('#user_charity').val('<%= charity[0] %>')">
+	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newUserModal" onclick="$('#myselectid').val('" + <%= charity[0] %> ")">
 		<%= charity[0] %>
 	</button>
 <% end %>
