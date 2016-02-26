@@ -14,7 +14,7 @@ Brackets4life::Application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
@@ -37,4 +37,18 @@ Brackets4life::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.action_mailer.perform_deliveries = true
+
+  # REMEMBER TO ALLOW GMAIL ACCESS FOR LESS SECURE APPS
+
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: "gmail.com",
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: "prof.vishnu@gmail.com", # you can use ordinary gmail username here
+    password: "vishbone"  # you can use your gmail password here, but don't push the changes
+  }
 end

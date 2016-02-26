@@ -1,15 +1,9 @@
-	<div class="modal fade" id="newUserModal" tabindex="-1" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel">New User</h4>
-				</div>
-				<h1 class="text-center">Sign up</h1>
+<section>
+<h2><%= t 'devise.invitations.edit.header' %></h2>
 
-				<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+<%= form_for(resource, :as => resource_name, :url => invitation_path(resource_name)) do |f| %>
 				<%= devise_error_messages! %>
-
+				  <%= f.hidden_field :invitation_token %>
 				<div class="form-field"><%= f.label :name %>
 					<%= f.text_field :name, :autofocus => true, :required => true %></div>
 
@@ -25,13 +19,13 @@
 								<div class="form-field"><%= f.label :charity %>
 									<%= f.select(:charity, $charities) %></div>
 
-									<div class="form-field"><%= f.submit "Sign up", :class => "cta btn btn-primary" %></div>
+									<div class="form-field"><%= f.submit t("devise.invitations.edit.submit_button"), :class => "cta btn btn-primary" %></div>
 									<% end %>
 									
 								<!--div class="links text-center">
 									<%= render "devise/shared/links" %>
 								</div-->
-							</div>
+
 							<script>
 								var password = document.getElementById("user_password")
 								var confirm_password = document.getElementById("user_password_confirmation");
@@ -46,4 +40,5 @@
 
 								password.onchange = validatePassword;
 								confirm_password.onkeyup = validatePassword;
-								</script
+								</script>
+								</section>

@@ -1,45 +1,29 @@
 <section>
+	<h1 class="text-center">Sign up</h1>
 
-<% $charities.each do |charity| %>
-	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newUserModal" onclick="$('#myselectid').val('" + <%= charity[0] %> ")">
-		<%= charity[0] %>
-	</button>
-<% end %>
+	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+	<%= devise_error_messages! %>
 
+	<div class="form-field"><%= f.label :name %>
+		<%= f.text_field :name, :autofocus => true %></div>
 
-	<div class="modal fade" id="newUserModal" tabindex="-1" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel">New User</h4>
-				</div>
-				<h1 class="text-center">Sign up</h1>
+		<div class="form-field"><%= f.label :email %>
+			<%= f.email_field :email, :autofocus => true %></div>
 
-				<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-				<%= devise_error_messages! %>
+			<div class="form-field"><%= f.label :password %>
+				<%= f.password_field :password %></div>
 
-				<div class="form-field"><%= f.label :name %>
-					<%= f.text_field :name, :autofocus => true %></div>
+				<div class="form-field"><%= f.label :password_confirmation %>
+					<%= f.password_field :password_confirmation %></div>
 
-					<div class="form-field"><%= f.label :email %>
-						<%= f.email_field :email, :autofocus => true %></div>
-
-						<div class="form-field"><%= f.label :password %>
-							<%= f.password_field :password %></div>
-
-							<div class="form-field"><%= f.label :password_confirmation %>
-								<%= f.password_field :password_confirmation %></div>
-
-								<div class="form-field"><%= f.label :charity %>
-								<%= f.select(:charity, $charities) %></div>
+					<div class="form-field"><%= f.label :charity %>
+						<%= f.select(:charity, $charities) %></div>
 
 
-								<div class="form-field"><%= f.submit "Sign up", :class => "cta btn btn-primary" %></div>
-								<% end %>
+						<div class="form-field"><%= f.submit "Sign up", :class => "cta btn btn-primary" %></div>
+						<% end %>
 
-								<!--div class="links text-center">
-									<%= render "devise/shared/links" %>
-								</div-->
-							</div>
-						</section>
+						<div class="links text-center">
+							<%= render "devise/shared/links" %>
+						</div>
+					</section>
