@@ -1,0 +1,44 @@
+<section>
+<h2><%= t 'devise.invitations.edit.header' %></h2>
+
+<%= form_for(resource, :as => resource_name, :url => invitation_path(resource_name)) do |f| %>
+				<%= devise_error_messages! %>
+				  <%= f.hidden_field :invitation_token %>
+				<div class="form-field"><%= f.label :name %>
+					<%= f.text_field :name, :autofocus => true, :required => true %></div>
+
+					<div class="form-field"><%= f.label :email %>
+						<%= f.email_field :email, :autofocus => true, :required => true %></div>
+
+						<div class="form-field"><%= f.label :password %>
+							<%= f.password_field :password, :minlength => 8, :required => true %></div>
+
+							<div class="form-field"><%= f.label :password_confirmation %>
+								<%= f.password_field :password_confirmation, :required => true %></div>
+
+								<div class="form-field"><%= f.label :charity %>
+									<%= f.select(:charity, $charities) %></div>
+
+									<div class="form-field"><%= f.submit t("devise.invitations.edit.submit_button"), :class => "cta btn btn-primary" %></div>
+									<% end %>
+									
+								<!--div class="links text-center">
+									<%= render "devise/shared/links" %>
+								</div-->
+
+							<script>
+								var password = document.getElementById("user_password")
+								var confirm_password = document.getElementById("user_password_confirmation");
+
+								function validatePassword(){
+									if(password.value != confirm_password.value) {
+										confirm_password.setCustomValidity("Passwords Don't Match");
+									} else {
+										confirm_password.setCustomValidity('');
+									}
+								}
+
+								password.onchange = validatePassword;
+								confirm_password.onkeyup = validatePassword;
+								</script>
+								</section>

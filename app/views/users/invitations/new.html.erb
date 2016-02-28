@@ -1,0 +1,38 @@
+<section>
+<h2>Send Invitations</h2>
+
+<%= form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => {:method => :post, :class => 'form-inline'} do |f| %>
+  <%= devise_error_messages! %>
+
+<% resource.class.invite_key_fields.each do |field| -%>
+  <%= f.label field %><br />
+  <%= f.text_field field %>
+<% end -%>
+
+  <%= f.submit "Send!" %>
+<% end %>
+
+<!--
+<%= form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => {:method => :post, :class => 'form-inline'} do |f| %>
+  <%= devise_error_messages! %>
+
+<% resource.class.invite_key_fields.each do |field| -%>
+  <%= f.label field %><br />
+  <%= f.text_field field %>
+<% end -%>
+
+  <%= f.submit "Send!" %>
+<% end %>
+
+<%= form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => {:method => :post, :class => 'form-inline'} do |f| %>
+  <%= devise_error_messages! %>
+
+<% resource.class.invite_key_fields.each do |field| -%>
+  <%= f.label field %><br />
+  <%= f.text_field field %>
+<% end -%>
+
+  <%= f.submit "Send!" %>
+<% end %>
+-->
+</section>
