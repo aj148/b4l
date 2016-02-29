@@ -36,4 +36,14 @@ Brackets4life::Application.configure do
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
 
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: "gmail.com",
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: "brackets4life@gmail.com", # you can use ordinary gmail username here
+    password: "brackets121works"  # you can use your gmail password here, but don't push the changes
+  }
+
 end
