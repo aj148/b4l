@@ -40,6 +40,8 @@ Brackets4life::Application.configure do
 
   config.action_mailer.perform_deliveries = true
 
+  Rails.application.routes.default_url_options[:host] = 'b4l.herokuapp.com'
+
   # REMEMBER TO ALLOW GMAIL ACCESS FOR LESS SECURE APPS
 
   config.action_mailer.smtp_settings = {

@@ -36,6 +36,8 @@ Brackets4life::Application.configure do
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
 
+  Rails.application.routes.default_url_options[:host] = 'b4l.herokuapp.com'
+  
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
