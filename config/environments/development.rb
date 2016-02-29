@@ -48,7 +48,7 @@ Brackets4life::Application.configure do
     domain: "gmail.com",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: "prof.vishnu@gmail.com", # you can use ordinary gmail username here
-    password: "vishbone"  # you can use your gmail password here, but don't push the changes
+    user_name: "brackets4life@gmail.com", # you can use ordinary gmail username here
+    password: "brackets121works"  # you can use your gmail password here, but don't push the changes
   }
 end
