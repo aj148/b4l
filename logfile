@@ -1,0 +1,15 @@
+LOG:  database system was shut down at 2016-03-03 01:57:30 EST
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  role "pguser" does not exist
+FATAL:  role "pguser" does not exist
+FATAL:  role "pguser" does not exist
+FATAL:  role "pguser" does not exist
+FATAL:  role "pguser" does not exist
+FATAL:  role "pguser" does not exist
+FATAL:  role "pguser" does not exist
+FATAL:  database "b4l_development" does not exist
+ERROR:  permission denied to create database
+STATEMENT:  CREATE DATABASE "b4l_development" ENCODING = 'utf8'
+FATAL:  database "b4l_development" does not exist

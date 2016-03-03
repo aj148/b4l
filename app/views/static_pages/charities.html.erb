@@ -1,10 +1,227 @@
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>This is a test of the charity grid</title>
+
+    <!-- Bootstrap Core CSS and js-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- Custom Fonts --> 
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="charity.css" rel="stylesheet" />
+
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+<div class="container">
 <section>
-	<div class="container">
-		<h1 class="text-center">Charities</h1>
-		<div class="row step">
-			<div class="col-sm-9 step-description">
-				<h2>1. Learn more about the charities we partner with!</h2>
-			</div>
-		</div>
-	</div>
-</section>
+	 <!-- Testimonial Section. Images and anchor tags need to be railsified-->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Our Charity Partners <small>Click to read more about each charity in the competition</small></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-4">
+                <div class="img-overlay">
+                    <a href="#" data-toggle="modal" data-target="#myModal1">
+                        <img class="img-responsive img-portfolio" src="http://placehold.it/350x150" alt="">
+                        <div class="overlay">
+                            <h3>Charity #1 <br /> <small>Here is a secondary tagline about charity one</small></h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title alt-text" id="myModalLabel">Charity 1 | <a href="http://www.powerhouseprotein.com">Click here to learn more</a>
+                    </h4>
+                  </div>
+                  <div class="modal-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" src="http://powerhouseprotein.com/">Click here to learn more</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4">
+                <div class="img-overlay">
+                <a href="#" data-toggle="modal" data-target="#myModal2">
+                    <img class="img-responsive img-portfolio" src="http://placehold.it/350x150" alt="">
+                    <div class="overlay">
+                        <h3>Charity #2 <br /> <small>Here is a secondary tagline about charity two</small></h3>
+                    </div>
+                </a>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title alt-text" id="myModalLabel">Charity 2 |   <a href="http://www.powerhouseprotein.com">Click here to learn more</a></h4>
+                  </div>
+                  <div class="modal-body">
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" src="http://powerhouseprotein.com/">Click here to learn more</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4">
+                <div class="img-overlay">
+                <a href="#" data-toggle="modal" data-target="#myModal3">
+                    <img class="img-responsive img-portfolio" src="http://placehold.it/350x150" alt="">
+                    <div class="overlay">
+                        <h3>Chance <br /> <small>Lab Mix</small></h3>
+                    </div>
+                </a>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title alt-text" id="myModalLabel"> Charlie S |   <span style="color: #FFFF00"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></h4>
+                  </div>
+                  <div class="modal-body">
+                    <p><i class="fa fa-quote-left fa-lg"></i> Remember when you were younger and had that very 1st best friend? told all your deepest feelings and secrets and you would do anything for your best friend You would always make sure your best friend had the best seat, the best food, the best friendship ring, the best piece of cake well today you may have a different type of best friend and when your new best friend needs the best care ever I recommend you bring your best friend to the best vet anywhere and that would be Prospect Ridge Veterinary. Cause when my best friend needed care and love and a place to be other than home I could see it in my best friends eyes that he had found a home away from home. But I do want to say I am a little afraid of one thing: when I go to pick my best friend. Chance home he might not want to leave :) so guess we will have to keep visiting his home away from home from time to time so that describes my experience with Prospect Ridge I hope I have touched your hearts to let you know how much each and every one of Chances family away from home has touch my heart and know he's got the best care ever.  Have a Blessed Day 
+                    <i class="fa fa-quote-right fa-lg"></i></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4">
+               <div class="img-overlay">
+                <a href="#" data-toggle="modal" data-target="#myModal4">
+                    <img class="img-responsive img-portfolio" src="http://placehold.it/350x150" alt="">
+                    <div class="overlay">
+                        <h3>Tabby &amp; Meadow <br /><small>Yorkshire Terriers</small></h3>
+                    </div>
+                </a>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title alt-text" id="myModalLabel">Eve B |   <span style="color: #FFFF00"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></h4>
+                  </div>
+                  <div class="modal-body">
+                    <p><i class="fa fa-quote-left fa-lg"></i> I love Propspect Ridge Veterinary!!! The care that my dogs got there was not only professional, but very loving. The Vet and Staff go above and beyond and I wouldn't settle for any less for my pets! <i class="fa fa-quote-right fa-lg"></i></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="col-md-3 col-sm-4">
+                <div class="img-overlay">
+                <a href="#" data-toggle="modal" data-target="#myModal5">
+                    <img class="img-responsive img-portfolio" src="http://placehold.it/350x150" alt="">
+                    <div class="overlay">
+                        <h3>Timmy <br /> <small>Beagle</small></h3>
+                    </div>
+                </a>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title alt-text" id="myModalLabel">Charlie C |   <span style="color: #FFFF00"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></h4>
+                  </div>
+                  <div class="modal-body">
+                    <p><i class="fa fa-quote-left fa-lg"></i> Great people there. I feel very comfortable letting them take care of my puppy. <i class="fa fa-quote-right fa-lg"></i></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4">
+               <div class="img-overlay">
+                <a href="#" data-toggle="modal" data-target="#myModal6">
+                    <img class="img-responsive img-portfolio" src="http://placehold.it/350x150" alt="">
+                    <div class="overlay">
+                        <h3>Hunter <br /> <small>Golden Retriever</small></h3>
+                    </div>
+                </a>
+                </div>
+            </div>
+
+        <!-- Modal -->
+            <div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title alt-text" id="myModalLabel">Name of Reviewer |   <span style="color: #FFFF00"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></h4>
+                  </div>
+                  <div class="modal-body">
+                    <p><i class="fa fa-quote-left fa-lg"></i> Needed Heart Worm medication for my dog Hunter. Called on Saturday and was able to pick up right away at an excellent price. <i class="fa fa-quote-right fa-lg"></i></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-->
+</body>
+</html>

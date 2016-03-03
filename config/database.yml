@@ -16,9 +16,11 @@ development:
   database: b4l_development
   pool: 5
   host: localhost
+  port: 5432
   username: pguser
   password: password
   timeout: 5000
+  
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -27,21 +29,20 @@ test:
   adapter: postgresql
   database: b4l_test
   pool: 5
-  host: localhost
+  host: localhost`
+  port: 5432
   username: pguser
   password: password
   timeout: 5000
-
   timeout: 5000
-
 
 production:
   adapter: postgresql
   database: b4l_producton
   pool: 5
   host: localhost
+  port: 5432
   username: pguser
   password: password
   timeout: 5000
-
   timeout: 5000
