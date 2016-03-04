@@ -1,6 +1,6 @@
 Brackets4life::Application.routes.draw do
 
-  devise_for :users, :controllers => { :invitations => 'users/invitations' }
+  devise_for :users, :controllers => { :invitations => 'users/invitations', :sessions => "users/sessions", :registrations => "users/registrations" }
 
 
   # static pages

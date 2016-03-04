@@ -35,7 +35,17 @@
 				<a href="/payments/create" class="btn btn-primary hero-btn" id="paymentButton">Donate</a>
 				<% end %> 
 				<br />
-				<a href="/users/invitation/new"> Or, click here to invite 3 people instead! </a>
+				<h5>Or, invite 3 people instead! So far, you've had <%= @referred %> successful referrals. Here's your link: </h5>
+				<h3><%= link_to(@referral_url, @referral_url) %></h3>
+				<div id="share_buttons"></div>
+				<script>
+					$('#share_buttons').share({
+						networks: ['email', 'twitter','facebook','tumblr','pinterest','googleplus'],
+						orientation: 'horizontal',
+						urlToShare: "<%= @referral_url %>"
+					});
+
+				</script>
 			</div>
 		</div>
 	</div>

@@ -6,6 +6,7 @@ class BracketsController < ApplicationController
 	def index
 		# list all the brackets for the current user
 		@brackets = current_user.brackets
+		@referred = current_user.referred
 
 		respond_to do |format|
 			format.html  # index.html.erb
