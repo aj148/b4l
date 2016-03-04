@@ -17,10 +17,10 @@
 						<%= f.email_field :email, :autofocus => true, :required => true %></div>
 
 						<div class="form-field"><%= f.label :password %>
-							<%= f.password_field :password, :minlength => 8, :required => true %></div>
+							<%= f.password_field :password, :class => "modal-form-input", :minlength => 8, :required => true %></div>
 
 							<div class="form-field"><%= f.label :password_confirmation %>
-								<%= f.password_field :password_confirmation, :required => true %></div>
+								<%= f.password_field :password_confirmation, :class => "modal-form-input", :required => true %></div>
 
 								<div class="form-field"><%= f.label :charity %>
 									<%= f.select(:charity, $charities) %></div>
@@ -33,8 +33,8 @@
 								</div-->
 							</div>
 							<script>
-								var password = document.getElementById("user_password")
-								var confirm_password = document.getElementById("user_password_confirmation");
+								var password = $("#user_password.modal-form-input")[0]
+								var confirm_password = $("#user_password_confirmation.modal-form-input")[0];
 
 								function validatePassword(){
 									if(password.value != confirm_password.value) {
