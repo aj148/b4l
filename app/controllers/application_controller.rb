@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
-	$charities = [["First Candle", "First Candle"], ["Susan G. Komen", "Susan G. Komen"], ["WHO", "WHO"], ["Red Cross", "Red Cross"]]
+	$charities = [["CJ Foundation for SIDS", "CJ Foundation for SIDS"], ["Charlie's Kids", "Charlie's Kids"], 
+	["Duke Cancer Patient Support Program", "Duke Cancer Patient Support Program"], ["Red Cross", "Red Cross"]]
 	protect_from_forgery
 end
