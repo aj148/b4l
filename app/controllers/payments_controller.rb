@@ -4,6 +4,8 @@ class PaymentsController < ApplicationController
 
   def new
     @bracket = Bracket.find(params[:bracket_id])
+    @referral_url = request.base_url + "/users/sign_up?ref=" + current_user.id.to_s
+    @referred = current_user.referred
   end
 
   def create

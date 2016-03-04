@@ -22,6 +22,8 @@
 							<div class="form-field"><%= f.label :password_confirmation %>
 								<%= f.password_field :password_confirmation, :class => "modal-form-input", :required => true %></div>
 
+								<%= f.hidden_field :referral_id, value: -1 %>
+
 								<div class="form-field"><%= f.label :charity %>
 									<%= f.select(:charity, $charities) %></div>
 
