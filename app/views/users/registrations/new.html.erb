@@ -19,7 +19,7 @@
 					<div class="form-field"><%= f.label :charity %>
 						<%= f.select(:charity, $charities) %></div>
 
-						<%= f.hidden_field :referral_code, value: @ref_code %>
+						<%= f.hidden_field :referral_code, value: @ref_code || -1 %>
 
 
 						<div class="form-field"><%= f.submit "Sign up", :class => "cta btn btn-primary" %></div>
