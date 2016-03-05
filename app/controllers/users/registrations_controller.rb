@@ -12,10 +12,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create
     super do |res|
       if res.persisted? then
-        @refUser = User.find(params["user"][:referral_code].to_i)
-        if @refUser then
-          @refUser.referred = @refUser.referred + 1
-          @refUser.save!
+        begin
+          @refUser = User.find(params["user"][:referral_code].to_i)
+          if @refUser then
+            @refUser.referred = @refUser.referred + 1
+            @refUser.save!
+          end
+        rescue ActiveRecord::RecordNotFound
         end
       end
     end
@@ -27,9 +30,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # PUT /resource
-  # def update
-  #   super
-  # end
+  def update
+   super
+ end
 
   # DELETE /resource
   # def destroy
