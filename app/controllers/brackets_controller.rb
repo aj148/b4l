@@ -7,6 +7,8 @@ class BracketsController < ApplicationController
 		# list all the brackets for the current user
 		@brackets = current_user.brackets
 		@referred = current_user.referred
+		@referral_url = request.base_url + "/users/sign_up?ref=" + current_user.id.to_s
+
 
 		respond_to do |format|
 			format.html  # index.html.erb

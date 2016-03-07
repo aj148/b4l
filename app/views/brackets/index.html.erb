@@ -19,7 +19,17 @@
 				Create new bracket
 			</button>
 			<h1>
-			You've successfully referred <%= @referred %> people.
+			You've successfully referred <%= @referred %> people. Use this URL to refer more: 
+			<h3><%= link_to(@referral_url, @referral_url) %></h3>
+				<div id="share_buttons"></div>
+				<script>
+					$('#share_buttons').share({
+						networks: ['email', 'twitter','facebook','tumblr','pinterest','googleplus'],
+						orientation: 'horizontal',
+						urlToShare: "<%= @referral_url %>"
+					});
+
+				</script>
 			</h1>
 		</div>
 	</div>
