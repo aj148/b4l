@@ -77,7 +77,7 @@ ActiveRecord::Schema.define(:version => 20160304080558) do
     t.string   "invited_by_type"
     t.integer  "invitations_count",      :default => 0
     t.integer  "invites",                :default => 0,  :null => false
-    t.integer  "referral_code",          :default => -1, :null => false
+    t.integer  "referral_code",                          :null => false
     t.integer  "referred",               :default => 0,  :null => false
   end
 
