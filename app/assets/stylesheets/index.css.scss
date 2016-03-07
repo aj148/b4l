@@ -1,23 +1,29 @@
-.hero-wrapper {
+/*.hero-wrapper {
 	display: table;
 	height: 360px;
 	.hero {
 		text-align: center;
 		display: table-cell;
 		vertical-align: middle;
-		#hero-h1 {
+		}
+*/
+		.hero-h1 {
 			padding: 10px 0;
 			color: white;
-			font-weight: 100;
 			text-align: center;
 		}
-		.hero-btn {
+			.sub {
+				color: white;
+				font-weight: 100;
+			}
+
+/*		.hero-btn {
 			width: 145px;
 			padding: 10px 0;
 			margin: 0 -15px;
-		}
-	}
-}
+		}*/
+
+/*}*/
 
 .step {
 	margin: 20px 0;

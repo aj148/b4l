@@ -1,23 +1,29 @@
 <section>
 	<div class="container">
-		<h1 class="text-center">Brackets</h1>
+		<h1 class="text-center">Your Brackets</h1>
 
 		<div class="row">
-			<div class="col-sm">
+			<div class="col-sm text-center">
 				<% if @brackets.present? %>
 				<%= render "brackets_table" %>
 				<% else %>
-				<p class="lead text-center">
-					Make a new Bracket:
+				<p class="lead">
+					Brackets open after Selection Sunday (March 13th). But in the meantime, you can get started on getting activated:
 				</p>
-				<p class="text-center">
-					<%= link_to 'Donate', new_donation_path, :class => "btn btn-primary btn-lg" %>
+				<p>
+					<%= link_to 'Click Here to Donate', new_donation_path, :class => "btn btn-primary btn-lg" %>
+					<br />
+					<h1>OR</h1>
+					<br />
+					<span class="lead">
+					Spread the word about Brackets 4 Life and refer 3 people!
+					</span>
 				</p>
 				<% end %>
 			</div>
-			<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#new-bracket">
+			<!--<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#new-bracket">
 				Create new bracket
-			</button>
+			</button>-->
 			<h1>
 			You've successfully referred <%= @referred %> people. Use this URL to refer more: 
 			<h3><%= link_to(@referral_url, @referral_url) %></h3>
