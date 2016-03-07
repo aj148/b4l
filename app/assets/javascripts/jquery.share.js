@@ -25,7 +25,7 @@
                     margin = this.share.settings.margin,
                     pageTitle = this.share.settings.title||$(document).attr('title'),
                     pageUrl = this.share.settings.urlToShare||$(location).attr('href'),
-                    pageDesc = "";
+                    pageDesc = this.share.settings.pageDesc || "";
                 
                 $.each($(document).find('meta[name="description"]'),function(idx,item){
                     pageDesc = $(item).attr("content");
@@ -109,7 +109,7 @@
                 pinterest:{url:'http://pinterest.com/pin/create/button/?url=|u|&media=&description=|d|'},
                 posterous:{url:'http://posterous.com/share?linkto=|u|&title=|t|'},
                 stumbleupon:{url:'http://www.stumbleupon.com/submit?url=|u|&title=|t|'},
-                email:{url:'mailto:?subject=|t|'}
+                email:{url:'mailto:?subject=|t|&body=|d| |u|'}
             }
         }
      
