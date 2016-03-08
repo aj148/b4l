@@ -7,8 +7,25 @@ class BracketsController < ApplicationController
 		# list all the brackets for the current user
 		@brackets = current_user.brackets
 		@referred = current_user.referred
-		@referral_url = request.base_url + "/users/sign_up?ref=" + current_user.id.to_s
+		inactiveBrackets = []
+		@brackets.each do |b|
+			if (not b.active) 
+				inactiveBrackets.push(b)
+			end
+		end
 
+		logger.info("HEEYYYTY - " + inactiveBrackets.length.to_s)
+		bracketsToActivate = (@referred / 3.0).to_i - (@brackets.length - inactiveBrackets.length)
+		logger.info("HEEYYYwwTY - " + bracketsToActivate.to_s)
+		for i in 0...bracketsToActivate
+			if i < inactiveBrackets.length
+				logger.info("HEEYYYY")
+				inactiveBrackets[i].active = true;
+				inactiveBrackets[i].save!
+			end
+		end
+		
+		@referral_url = request.base_url + "/users/sign_up?ref=" + current_user.id.to_s
 
 		respond_to do |format|
 			format.html  # index.html.erb

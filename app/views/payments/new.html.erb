@@ -35,14 +35,15 @@
 				<a href="/payments/create" class="btn btn-primary hero-btn" id="paymentButton">Donate</a>
 				<% end %> 
 				<br />
-				<h5>Or, invite 3 people instead! So far, you've had <%= @referred %> successful referrals. Here's your link: </h5>
+				<h5>Or, invite 3 people instead! So far, you have <%= @referred %> credits. Each successful referral gets you one more. Here's your link: </h5>
 				<h3><%= link_to(@referral_url, @referral_url) %></h3>
 				<div id="share_buttons"></div>
 				<script>
 					$('#share_buttons').share({
 						networks: ['email', 'twitter','facebook','tumblr','pinterest','googleplus'],
 						orientation: 'horizontal',
-						urlToShare: "<%= @referral_url %>"
+						urlToShare: "<%= @referral_url %>",
+						pageDesc: "I just signed up for the Brackets 4 Life 2016 March Madness Tournament to help in the fight against SIDS! Join me:" 
 					});
 
 				</script>
