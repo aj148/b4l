@@ -14,5 +14,7 @@
 /log/*.log
 /tmp
 
+/server
+
 brackets.sublime-project
 brackets.sublime-workspace

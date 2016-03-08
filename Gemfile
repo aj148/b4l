@@ -33,6 +33,7 @@ gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'browser'
 gem 'formtastic'
 gem 'formtastic-bootstrap'
+gem 'chartkick'
 
 
 gem 'rails_12factor', group: :production
