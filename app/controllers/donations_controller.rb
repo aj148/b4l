@@ -11,25 +11,32 @@ class DonationsController < ApplicationController
 	  	@amt = 500
 	  end
 
-		email = "anonymous@mail.com"
+	  email = "anonymous@mail.com"
+
 	  if current_user
-			email = current_user.email if !current_user.email.blank?
+	  	email = current_user.email if !current_user.email.blank?
 	  end
 
-	  customer = Stripe::Customer.create(
-	    :email => email,
-	    :card  => params[:stripeToken]
-	  )
+	  begin
+	  	customer = Stripe::Customer.create(
+	  		:email => email,
+	  		:card  => params[:stripeToken]
+	  		)
 
-	  charge = Stripe::Charge.create(
-	    :customer    => customer.id,
-	    :amount      => @amt,
-	    :description => 'Bracket Customer',
-	    :currency    => 'usd'
-	  )
+	  	charge = Stripe::Charge.create(
+	  		:customer    => customer.id,
+	  		:amount      => @amt,
+	  		:description => 'Bracket Customer',
+	  		:currency    => 'usd'
+	  		)
 
 	  rescue Stripe::CardError => e
 	  	flash[:error] = e.message
+	  else
+	  	current_user.referred += 3;
+      	current_user.save!
+	  end
+
 
 	  # flash[:success] = "Thank You for your contribution!"
 	  # redirect_to '/account'

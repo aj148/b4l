@@ -33,6 +33,8 @@ class PaymentsController < ApplicationController
     rescue Stripe::CardError => e
       flash[:error] = e.message
     else
+      current_user.referred += 3;
+      current_user.save!
       @bracket.active = true
       @bracket.save!
     end
