@@ -15,7 +15,7 @@ class PaymentsController < ApplicationController
     @amt = params[:payment_amt]
 
     if @amt.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil
-      @amt = 700
+      @amt = 500
     end
 
     begin

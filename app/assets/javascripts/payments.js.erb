@@ -1,5 +1,5 @@
 $(function () {
-    var bill_amt = 700;
+    var bill_amt = 500;
     
     $('#paymentButton').click(function(){
         var token = function(res){
@@ -22,7 +22,7 @@ $(function () {
     });
 
     $('select.opts').on('change', function() {
-        var total = parseInt(this.value,10) + 2;
+        var total = parseInt(this.value,10);
         $('#amt_shown').text("$"+total+".00");
         bill_amt = total * 100;
         $("#payment_amt").val(bill_amt);
