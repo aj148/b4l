@@ -39,7 +39,7 @@ class DonationsController < ApplicationController
 
 
 	  flash[:success] = "Thank You for your contribution!"
-	  redirect_to '/account'
+	  redirect_to '/brackets'
 
 	end
 end
