@@ -7,11 +7,11 @@
 				<% if @brackets.present? %>
 				<%= render "brackets_table" %>
 				<% else %>
-				<p class="lead">
+<!-- 				<p class="lead">
 					Brackets open after Selection Sunday (March 13th). But in the meantime, you can get started on getting activated:
 				</p>
 				<p>
-					<%= link_to 'Click Here to Donate', new_donation_path, :class => "btn btn-primary btn-lg" %>
+					<= link_to 'Click Here to Donate', new_donation_path, :class => "btn btn-primary btn-lg" %>
 					<br />
 					<h1>OR</h1>
 					<br />
@@ -20,10 +20,10 @@
 					</span>
 				</p>
 				<% end %>
-			</div>
-			<!--<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#new-bracket">
+			</div> -->
+			<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#new-bracket">
 				Create new bracket
-			</button>-->
+			</button>
 			<h1>
 			So far, you have <%= @referred %> credits. Each successful referral gets you one more. Share this link: 
 			<h3><%= link_to(@referral_url, @referral_url) %></h3>
