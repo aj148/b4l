@@ -15,7 +15,9 @@ class PaymentsController < ApplicationController
     @amt = params[:payment_amt]
 
     if @amt.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil
-      @amt = 700
+      @amt = 500
+    else
+      @amt = @amt.to_i
     end
 
     begin
@@ -33,7 +35,9 @@ class PaymentsController < ApplicationController
     rescue Stripe::CardError => e
       flash[:error] = e.message
     else
-      current_user.referred += 3;
+      current_user.referred += (@amt.to_i / 500).to_i * 3;
+      current_user.paid = current_user.paid || 0
+      current_user.paid += @amt.to_i;
       current_user.save!
       @bracket.active = true
       @bracket.save!

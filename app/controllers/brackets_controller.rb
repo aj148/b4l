@@ -36,10 +36,13 @@ class BracketsController < ApplicationController
 	def new
 		# render a new bracket page
 		# redirect_to root_path, :notice => "The time period for creating a bracket has closed, but you can still donate!"
-		@bracket ||= Bracket.new params[:bracket]
-		@predictions = @bracket.predictions
-		puts "hi"
-		return
+		if current_user.brackets.length >= 3
+			redirect_to root_path, :notice => "Sorry, you can only create 3 brackets at a time!"
+		else
+			@bracket ||= Bracket.new params[:bracket]
+			@predictions = @bracket.predictions
+			return
+		end
 	end
 
 	def create
