@@ -24,8 +24,15 @@
 			<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#new-bracket">
 				Create new bracket
 			</button> -->
-			<h1>
-			So far, you have <%= @referred %> credits. Each successful referral gets you one more. Share this link: 
+			<h4>
+			You currently have: <span style="font-weight: bold;"><%= @referred %> credits (<%= @unusedCreds %> unused). </span>
+			<br />
+			A $5 donation is 3 credits & 1 successful referral is 1 credit.
+			<br />
+			It takes 3 credits to activate a bracket. 
+			<br />
+			<br />
+			Share this link now to invite your friends:
 			<h3><%= link_to(@referral_url, @referral_url) %></h3>
 				<div id="share_buttons"></div>
 				<script>
@@ -38,7 +45,7 @@
 					});
 
 				</script>
-			</h1>
+			</h4>
 		</div>
 	</div>
 	<%= render 'new_bracket_modal' %>

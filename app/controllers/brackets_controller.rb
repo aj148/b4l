@@ -7,6 +7,7 @@ class BracketsController < ApplicationController
 		# list all the brackets for the current user
 		@brackets = current_user.brackets
 		@referred = current_user.referred
+		@unusedCreds = if @brackets.present? then [@referred - (@brackets.length * 3), 0].max else "all" end
 		inactiveBrackets = []
 		@brackets.each do |b|
 			if (not b.active) 
@@ -14,9 +15,7 @@ class BracketsController < ApplicationController
 			end
 		end
 
-		logger.info("HEEYYYTY - " + inactiveBrackets.length.to_s)
 		bracketsToActivate = (@referred / 3.0).to_i - (@brackets.length - inactiveBrackets.length)
-		logger.info("HEEYYYwwTY - " + bracketsToActivate.to_s)
 		for i in 0...bracketsToActivate
 			if i < inactiveBrackets.length
 				logger.info("HEEYYYY")
