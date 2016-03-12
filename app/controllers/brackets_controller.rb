@@ -38,7 +38,6 @@ class BracketsController < ApplicationController
 		# redirect_to root_path, :notice => "The time period for creating a bracket has closed, but you can still donate!"
 		@bracket ||= Bracket.new params[:bracket]
 		@predictions = @bracket.predictions
-		puts "hi"
 		return
 	end
 
@@ -68,6 +67,10 @@ class BracketsController < ApplicationController
 
 		@bracket = Bracket.find(params[:id])
 		@predictions = @bracket.predictions.includes(:winner)
+		if current_user.referred >= 3
+			@bracket.update_score!
+			@bracket.save!
+		end	
 	end
 
 	def edit
@@ -76,6 +79,9 @@ class BracketsController < ApplicationController
 
 	def update
 		# will update a users bracket
+		@bracket = Bracket.find(params[:id])
+		@bracket.update_score!
+		@bracket.save!
 	end
 
 	def destroy

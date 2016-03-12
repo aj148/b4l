@@ -34,6 +34,8 @@ gem 'browser'
 gem 'formtastic'
 gem 'formtastic-bootstrap'
 gem 'chartkick'
+gem 'minitest'
+gem 'test-unit'
 
 
 gem 'rails_12factor', group: :production
