@@ -14,10 +14,11 @@
 
     <div class="collapse navbar-collapse" id="navbar-content">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "About", about_path%></li>
+        <li><%= link_to "Home", root_path%></li>
+        <li><%= link_to "About Us", about_path%></li>
         <li><%= link_to "Tournament", tournament_path%></li>
         <li><%= link_to "Prizes", prizes_path%></li>
-        <li><%= link_to "Charities", charities_path%></li>
+        <!-- <li><%= link_to "Charities", charities_path%></li> -->
         <li><a href="/users/sign_in"> Sign In </a></li>
         <% if user_signed_in? %>
         <li class="dropdown">
@@ -33,7 +34,7 @@
         
         <% else %>
         <!--li><%= link_to "Get Started", new_user_registration_path %></li-->
-         <li> <a href="" data-toggle="modal" data-target="#newUserModal">Get Started</a> </li>
+         <li> <a class= "btn btn-primary btn-nav" href="" data-toggle="modal" data-target="#newUserModal">Get Started</a> </li>
         <% end %>
       </ul>
     </div>

@@ -14,5 +14,11 @@
 /log/*.log
 /tmp
 
+/server
+
 brackets.sublime-project
 brackets.sublime-workspace
+
+/config/local_env.rb
+/config/local_env.yml
+/config/application.yml

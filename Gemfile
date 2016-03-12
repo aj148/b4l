@@ -10,6 +10,7 @@ end
 
 group :production, :staging do
   gem 'unicorn'
+  gem 'rack-google_analytics', :require => "rack/google_analytics"
 end
 
 
@@ -23,6 +24,7 @@ group :assets do
 end
 
 #gem 'sqlite3'
+
 gem 'pg'
 gem 'jquery-rails'
 gem 'devise'
@@ -33,6 +35,9 @@ gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'browser'
 gem 'formtastic'
 gem 'formtastic-bootstrap'
+gem 'chartkick'
+gem 'minitest'
+gem 'test-unit'
 
 
 gem 'rails_12factor', group: :production

@@ -71,6 +71,10 @@ class BracketsController < ApplicationController
 
 		@bracket = Bracket.find(params[:id])
 		@predictions = @bracket.predictions.includes(:winner)
+		if current_user.referred >= 3
+			@bracket.update_score!
+			@bracket.save!
+		end	
 	end
 
 	def edit
@@ -79,6 +83,9 @@ class BracketsController < ApplicationController
 
 	def update
 		# will update a users bracket
+		@bracket = Bracket.find(params[:id])
+		@bracket.update_score!
+		@bracket.save!
 	end
 
 	def destroy

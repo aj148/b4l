@@ -1,52 +1,25 @@
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Bootstrap Core CSS and js-->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-
-    <!-- Custom Fonts --> 
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" /> <!-- there is a ruby gem for this -->
-
-    <!-- Custom CSS -->
-    <!--<link href="charity.css" rel="stylesheet" />-->
-
-
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-
-
 <section class="black">
 	<div class="container">
-		<div class="row">
 				<div class="row step">
 					<div class="text-center">
-					<center>
-						<h1 class="hero-h1">This Year, Make a Bracket that Makes a Difference </h1>
-					</center>
+            <div class="col-lg-12">
+			       	<h1 class="hero-h1 text-center">This Year, Make a Bracket that Makes a Difference </h1>
+             </div>
 					</div>
 				</div>
 				<div class="row step">
-					<iframe src="//player.vimeo.com/video/157543861?title=0&byline=0&portrait=0&badge=0" width="480" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-				</div>
+          <div class="col-lg-12">
+					     <iframe src="//player.vimeo.com/video/157543861?title=0&byline=0&portrait=0&badge=0" width="600" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
+        </div>
 				<div class="row step">
-					<h1 class="sub">  In just 30 seconds, you can join the fight against Sudden Infant Death Syndrome</h1>
-				<div class="text-center">
-          <a class = "btn btn-primary btn-lg" href="" data-toggle="modal" data-target="#newUserModal"> Create Your Bracket Now!</a> 
-				</div>
+          <div class="col-lg-12">
+					 <h1 class="sub">  In just 30 seconds, you can join the fight against Sudden Infant Death Syndrome</h1>
+				    <div class="text-center">
+              <a class = "btn btn-primary btn-lg" href="" data-toggle="modal" data-target="#newUserModal"> Sign Up Today!</a> 
+				    </div>
+          </div>
 			</div>	
-		</div>
 	</div>
 </section>
 
@@ -60,7 +33,7 @@
 			<div class="col-sm-9 step-description">
 				<h2>1. Sign up</h2>
 				<p>
-					All you need to <!--railsify link to download-->get started<!--end comment--> is your email!
+					All you need to <a href="" data-toggle="modal" data-target="#newUserModal">get started</a> is your email!
 				</p>
 			</div>
 		</div>
@@ -115,7 +88,7 @@
 	</div>
 	</section>
 
-	<!--Charity Partner Section-->
+	<!--Charity Partner Section #B84FDB-->
 	<section class="black">
 		<div class="container">
 			<h1 class="text-center charity-header">Our Charity Partners </h1>
@@ -125,7 +98,7 @@
                     <a href="#" data-toggle="modal" data-target="#myModal1">
                          <%= image_tag "CJF.png", :class=>"img-responsive img-portfolio"%>
                         <div class="overlay">
-                            <h3>CJ Foundation for Kids <br /> <small>Dedicated to Eliminating the Tragedy of Sudden Infant Death</small></h3>
+                            <h3>CJ Foundation for SIDS <br /> <small>Dedicated to Eliminating the Tragedy of Sudden Infant Death</small></h3>
                         </div>
                     </a>
                 </div>
@@ -173,13 +146,13 @@
                   <div class="modal-body">
                    <p>
                    Through Charlie Paul Hanke’s story, we aim to raise awareness and support for SIDS by educating families, providing resources for new parents and promoting dialogue about SIDS and safe sleep practices.
- 				  	</p>
- 				   	<p>
-					Our mission is to distribute information about SIDS and safe sleep practices to families. Sleep Baby Safe and Snug will serve as the primary vehicle of safe sleep education.
- 					</p>
- 					<p>
-					This special children’s board book written specifically for Charlie’s Kids by pediatrician and author John Hutton, teaches caregivers what to do and not do to put a baby to sleep safely. The book will not only provide information about SIDS in a new, easy to understand way, but it will also promote early literacy.
-                  	</p>
+ 				  	      </p>
+ 				   	       <p>
+					         Our mission is to distribute information about SIDS and safe sleep practices to families. Sleep Baby Safe and Snug will serve as the primary vehicle of safe sleep education.
+ 					        </p>
+ 					        <p>
+					         This special children’s board book written specifically for Charlie’s Kids by pediatrician and author John Hutton, teaches caregivers what to do and not do to put a baby to sleep safely. The book will not only provide information about SIDS in a new, easy to understand way, but it will also promote early literacy.
+                	</p>
 
                   </div>
                   <div class="modal-footer">
@@ -193,9 +166,9 @@
             <div class="col-md-3 col-sm-4">
                 <div class="img-overlay">
                 <a href="#" data-toggle="modal" data-target="#myModal3">
-                     <%= image_tag "DCPSP.png", :class=>"img-responsive img-portfolio"%>
+                     <%= image_tag "FC.png", :class=>"img-responsive img-portfolio"%>
                     <div class="overlay">
-                        <h3>Duke Cancer Support Program<br /> <small>Treating Your Whole Person Not Just Your Cancer</small></h3>
+                        <h3>First Candle<br /> <small>Helping Babies Survive &amp; Thrive</small></h3>
                     </div>
                 </a>
                 </div>
@@ -207,15 +180,15 @@
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title alt-text" id="myModalLabel"><a href="https://www.dukemedicine.org/treatments/cancer/cancer-support-services" target="_blank">Duke Cancer Support Program</a></h4>
+                    <h4 class="modal-title alt-text" id="myModalLabel"><a href="http//www.firstcandle.org" target="_blank">First Candle</a></h4>
                   </div>
                   <div class="modal-body">
                     <p>
-                    	The Duke Cancer Patient Support Program (DCPSP) provides services and resources to help support patients and their loved ones throughout their experience with cancer. Services include: Individual, couple, and family therapy; Support groups; Self-image resources; Volunteer companionship and peer support; All support services are provided at no charge to patients and their families.
- 					</p>
+                    	First Candle is a leading national nonprofit dedicated to safe pregnancies and the survival of babies through the first years of life. With programs of research, education and advocacy, the organization is working to ensure that every baby is given the best possible chance to reach not only his or her first birthday, but many happy birthdays beyond. First Candle also provides compassionate grief support to all those affected by the death of a baby.
+ 					        </p>
                   </div>
                   <div class="modal-footer">
-                  	<a class="btn btn-primary" href="https://www.dukemedicine.org/treatments/cancer/cancer-support-services" target="_blank">Click here to learn more</a>
+                  	<a class="btn btn-primary" href="http://www.firstcandle.org" target="_blank">Click here to learn more</a>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                   </div>
                 </div>
@@ -227,7 +200,7 @@
                 <a href="#" data-toggle="modal" data-target="#myModal4">
                      <%= image_tag "ButlerDeca.png", :class=>"img-responsive img-portfolio"%>
                     <div class="overlay">
-                        <h3>Butler High School DECA<br /><small>SIDS Philanthropic Iniative</small></h3>
+                        <h3>Butler High School DECA<br /><small>SIDS Philanthropic Initiative</small></h3>
                     </div>
                 </a>
                 </div>
@@ -257,11 +230,152 @@
               </div>
             </div>
 
+          <div class="col-md-3 col-sm-4">
+               <div class="img-overlay">
+                <a href="#" data-toggle="modal" data-target="#myModal5">
+                     <%= image_tag "CFCF.png", :class=>"img-responsive img-portfolio"%>
+                    <div class="overlay">
+                        <h3>Cure Finders For Cystic Fibrosis<br /><small>Raising Funds and Awareness for CF at Duke University</small></h3>
+                    </div>
+                </a>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title alt-text" id="myModalLabel"><a href="https://www.facebook.com/CF4CF/?fref=ts" target="_blank">Cure Finders For Cystic Fibrosis</a></h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Founded in 2013, Cure Finders for Cystic Fibrosis raises funds and awareness for CF at Duke University. Cure Finders is partnered with the Cystic Fibrosis Foundation, whose mission is to cure cystic fibrosis and to provide all people with the disease the opportunity to lead full, productive lives by funding research and drug development, promoting individualized treatment and ensuring access to high-quality, specialized care.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <a class="btn btn-primary" href="https://www.facebook.com/CF4CF/?fref=ts" target="_blank">Click here to learn more</a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4">
+               <div class="img-overlay">
+                <a href="#" data-toggle="modal" data-target="#myModal6">
+                     <%= image_tag "DukeDG.png", :class=>"img-responsive img-portfolio"%>
+                    <div class="overlay">
+                        <h3>Duke Delta Gamma<br /><small>Service for Sight</small></h3>
+                    </div>
+                </a>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title alt-text" id="myModalLabel"><a href="http://duke.deltagamma.org/service-for-sight" target="_blank">Duke Delta Gamma</a></h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      The Delta Gamma Foundation fosters lifetime enrichment for members, promotes Service for Sight, and partners with the Fraternity to ensure the future of our sisterhood.
+                    </p>
+                    <p>
+                      Service for Sight has been at the heart of Delta Gamma’s philanthropic mission since 1936. The Delta Gamma Foundation has given over $2,800,000 in Service for Sight grants to organizations and schools that share the Foundation’s mission: to promote sight preservation and assistance to children and adults who are blind or visually impaired.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <a class="btn btn-primary" href="http://duke.deltagamma.org/service-for-sight" target="_blank">Click here to learn more</a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4">
+               <div class="img-overlay">
+                <a href="#" data-toggle="modal" data-target="#myModal7">
+                     <%= image_tag "C4K.png", :class=>"img-responsive img-portfolio"%>
+                    <div class="overlay">
+                        <h3>Cribs For Kids<br /><small>Helping Every Baby Sleep Safer</small></h3>
+                    </div>
+                </a>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title alt-text" id="myModalLabel"><a href="http://www.cribsforkids.org/" target="_blank">Cribs For Kids</a></h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Every year in the United States, more than 3,500 infant deaths occur due to accidental suffocation, asphyxia, or undetermined causes during sleep. Since 1998, Cribs for Kids® National Infant Safe Sleep Initiative has been making an impact on the rate of babies dying of sleep-related death in unsafe sleeping environments.
+                    </p>
+                    <p>
+                      The mission of Cribs for Kids® is to prevent these deaths by educating parents and caregivers on the importance of practicing safe sleep for their babies and by providing Graco® Pack ‘n Play® portable cribs to families who, otherwise, cannot afford a safe place for their babies to sleep.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <a class="btn btn-primary" href="http://www.cribsforkids.org/" target="_blank">Click here to learn more</a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4">
+               <div class="img-overlay">
+                <a href="#" data-toggle="modal" data-target="#myModal8">
+                     <%= image_tag "H4H.png", :class=>"img-responsive img-portfolio"%>
+                    <div class="overlay">
+                        <h3>Hoops 4 Hope<br /><small>Helping African Communities Help Themselves
+                        </small></h3>
+                    </div>
+                </a>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title alt-text" id="myModalLabel"><a href="www.HoopsAfrica.org" target="_blank">Hoops 4 Hope</a></h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Founded in 1995, Hoops 4 Hope is a global not-for-profit organization that is leveling the playing field for kids in disadvantaged schools and communities of South Africa and Zimbabwe. Hoops 4 Hope provides children with the rare opportunity to play organized basketball, and to develop life skills that help them to make the healthy decisions on and off the court. With access to safe sports facilities, trained local coaches, education, exchanges and employment opportunities, H4H is truly making a social impact through sport.
+ 
+                    </p>
+                    <p>
+                      Find out more at www.HoopsAfrica.org
+                      Like us at www.Facebook.com/Hoops4Hope
+                      Follow us on Instagram @Hoops4HopeGlobal 
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <a class="btn btn-primary" href="www.HoopsAfrica.org" target="_blank">Click here to learn more</a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
         </div>
+                      <!--railsify. Well don't railsify, just fix this path so it starts a sign up instead of a donation-->
+
         <!-- /.row -->
         <div clas="row">
         		<div class="text-center">
-        			<!--railsify. Well don't railsify, just fix this path so it starts a sign up instead of a donation-->
+              <br />
               <a class = "btn btn-primary btn-lg" href="" data-toggle="modal" data-target="#newUserModal"> Pick Your Charity and Get Started!</a> 
 				</div>
 		</div>
@@ -276,26 +390,15 @@
   		<div class="row">
   			<div class="col-lg-12">
   				<!--railsify this shit: aka just add this gem https://github.com/ankane/chartkick/blob/master/README.md to add the gem and then uncomment this-->
-  				<!--<= pie_chart([["Your charity", 50], 
+  				<%= pie_chart([["Your charity", 50], 
   					["Christopher James McConville Fund for SIDS research", 25], 
   					["1st place player's charity", 10], 
   					["2nd place player's charity", 5],
   					["3rd place player's charity", 4],
   					["4th place player's charity", 3],
   					["5th place player's charity", 2],
-  					["6th place player's charity", 1]]) %>-->
-  					<ul class="fa-ul">
-					<li><i class="fa-li fa chevron-circle-right"></i>50% of any donation you make will go to the charity you choose to play for.</li>
-					<li><i class="fa-li fa chevron-circle-right"></i>25% of your donation will go to the Christopher James McConville Fund for SIDS research purposes.</li>  
-					<li><i class="fa-li fa chevron-circle-right"></i>The remaining 25% will be divided up amongst the highest scoring brackets in this year’s tournament:
-						<ul class="fa-ul">
-						<li><i class="fa-li fa check-square"></i>1st place: 10%</li>
-						<li><i class="fa-li fa check-square"></i>2nd place: 5%</li>
-						<li><i class="fa-li fa check-square"></i>3rd place: 4%</li>
-						<li><i class="fa-li fa check-square"></i>4th place: 3%</li>
-						<li><i class="fa-li fa check-square"></i>5th place: 2%</li>
-						<li><i class="fa-li fa check-square"></i>6th place: 1%</li>
-						</ul>
+  					["6th place player's charity", 1]]) %>
+  				
 					</li>
 					</ul>  
 				<br />
