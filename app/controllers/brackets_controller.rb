@@ -18,7 +18,6 @@ class BracketsController < ApplicationController
 		bracketsToActivate = (@referred / 3.0).to_i - (@brackets.length - inactiveBrackets.length)
 		for i in 0...bracketsToActivate
 			if i < inactiveBrackets.length
-				logger.info("HEEYYYY")
 				inactiveBrackets[i].active = true;
 				inactiveBrackets[i].save!
 			end

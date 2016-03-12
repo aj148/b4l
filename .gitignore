@@ -19,6 +19,7 @@
 brackets.sublime-project
 brackets.sublime-workspace
 
+/local_env.rb
 /config/local_env.rb
 /config/local_env.yml
 /config/application.yml

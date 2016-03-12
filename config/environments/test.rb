@@ -48,8 +48,8 @@ config.action_mailer.smtp_settings = {
   domain: "b4l.herokuapp.com",
   authentication: "plain",
   enable_starttls_auto: true,
-  user_name: "brackets4life@gmail.com",
-  password: "brackets121works"
+  user_name: ENV['EMAIL'],
+  password: ENV['EMAILPASSWORD']
 }
 
 end

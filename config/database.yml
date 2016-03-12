@@ -17,8 +17,8 @@ development:
   pool: 5
   host: localhost
   port: 5432
-  username: pguser
-  password: password
+  username: <%= ENV['PGUSER'] %>
+  password: <%= ENV['PGPASSWORD'] %>
   timeout: 5000
 
 # Warning: The database defined as "test" will be erased and
@@ -30,8 +30,8 @@ test:
   pool: 5
   host: localhost
   port: 5432
-  username: pguser
-  password: password
+  username: <%= ENV['PGUSER'] %>
+  password: <%= ENV['PGPASSWORD'] %>
   timeout: 5000
   timeout: 5000
 
@@ -41,7 +41,7 @@ production:
   pool: 5
   host: localhost
   port: 5432
-  username: pguser
-  password: password
+  username: <%= ENV['PGUSER'] %>
+  password: <%= ENV['PGPASSWORD'] %>
   timeout: 5000
   timeout: 5000

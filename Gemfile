@@ -38,6 +38,7 @@ gem 'formtastic-bootstrap'
 gem 'chartkick'
 gem 'minitest'
 gem 'test-unit'
+gem 'thin'
 
 
 gem 'rails_12factor', group: :production
