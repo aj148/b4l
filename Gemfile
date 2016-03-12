@@ -10,6 +10,7 @@ end
 
 group :production, :staging do
   gem 'unicorn'
+  gem 'rack-google_analytics', :require => "rack/google_analytics"
 end
 
 
@@ -23,6 +24,7 @@ group :assets do
 end
 
 #gem 'sqlite3'
+
 gem 'pg'
 gem 'jquery-rails'
 gem 'devise'
