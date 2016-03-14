@@ -20,33 +20,65 @@
 					</span>
 				</p>
 				<% end %>
-			</div>
-			<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#new-bracket">
-				Create new bracket
-			</button> -->
-			<h4>
-			You currently have: <span style="font-weight: bold;"><%= @referred %> credits (<%= @unusedCreds %> unused). </span>
-			<br />
-			A $5 donation is 3 credits & 1 successful referral is 1 credit.
-			<br />
-			It takes 3 credits to activate a bracket. 
-			<br />
-			<br />
-			Share this link now to invite your friends:
-			<h3><%= link_to(@referral_url, @referral_url) %></h3>
-				<div id="share_buttons"></div>
-				<script>
-					$('#share_buttons').share({
-						networks: ['email', 'twitter','facebook','tumblr','pinterest','googleplus'],
-						orientation: 'horizontal',
-						urlToShare: "<%= @referral_url %>",
-						title: "Join Brackets4Life!",
-						pageDesc: "I just signed up for the Brackets 4 Life 2016 March Madness Tournament to help in the fight against SIDS! Join me:" 
-					});
-
-				</script>
-			</h4>
+			<button type="button" class="btn btn-primary btn-lg" style="margin-left: 5px" data-toggle="modal" data-target="#new-bracket">
+				Create New Bracket
+			</button>
 		</div>
+		<!-- /.row -->
 	</div>
+		<h2 class="page-header">Your credits</h2>
+		<div class "row">
+			<h3 class="text-center">
+			<strong>
+			You currently have <%= @referred %> credits (<%= @unusedCreds %> remaining) 
+			</strong>
+			</h3>
+			<h4 class="text-center">
+				It takes 3 credits to make a bracket. Here's how you get more:
+			</h4>
+			<br />
+		</div>
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h2><strong><i class="glyphicon glyphicon-gift"></i> Donate $5<strong></h2>
+				</div>
+				<div class="panel-body text-center">
+					<h1>$5 donation = 3 credits</h1>
+					<br />
+					<br />
+					<br />
+					<%= link_to 'Click Here to Donate', new_donation_path, :class => "btn btn-primary btn-lg" %>
+					<br />
+					<br />
+					<br />
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h2><strong><i class="glyphicon glyphicon-user"></i> Refer 3 Friends Who Sign Up<strong></h2>
+				</div>
+				<div class="panel-body text-center">
+					<h1>1 referral = 1 credit</h1>		
+					<p>
+					Share this link now to invite your friends:
+					<h3><%= link_to(@referral_url, @referral_url) %></h3>
+					<div id="share_buttons"></div>
+					<script>
+						$('#share_buttons').share({
+							networks: ['email', 'twitter','facebook','tumblr','pinterest','googleplus'],
+							orientation: 'horizontal',
+							urlToShare: "<%= @referral_url %>",
+							title: "Join Brackets4Life!",
+							pageDesc: "I just signed up for the Brackets 4 Life 2016 March Madness Tournament to help in the fight against SIDS! Join me:" 
+						});
+				</script>
+					</p>
+				</div>
+			</div>
+		</div>
 	<%= render 'new_bracket_modal' %>
 </section>
