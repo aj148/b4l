@@ -40,4 +40,22 @@ class Prediction < ActiveRecord::Base
 	def correct?
 		return finished? && Game.slot(slot).first.winner == winner
 	end
+
+	def incorrect?
+		if finished? and not correct?
+			return true
+		else
+			return false
+		end
+	end
+
+	def color
+		if correct?
+			return 'green'
+		elsif incorrect?
+			return 'red'
+		else
+			return 'black'
+		end
+	end
 end

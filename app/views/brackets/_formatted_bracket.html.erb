@@ -47,7 +47,7 @@
 									<span class="seed">
 										<%= t.seed if t != nil %>
 									</span>
-									<span class="team-name">
+									<span class="team-name" style="<%= if p.any? then 'color: ' + p.first.color end %>">
 										<%= t.name if t != nil %>
 									</span>
 								</li>
@@ -57,7 +57,7 @@
 									<span class="seed">
 										<%= t.seed if t != nil %>
 									</span>
-									<span class="team-name">
+									<span class="team-name" style="<%= if p.any? then 'color: ' + p.first.color end %>">
 										<%= t.name if t != nil %>
 									</span>
 								</li>
@@ -75,7 +75,7 @@
 						<span class="seed">
 							<%= t.seed if t != nil %>
 						</span>
-						<span class="team-name">
+						<span class="team-name" style="<%= if p.any? then 'color: ' + p.first.color end %>">
 							<%= t.name if t != nil %>
 						</span>
 					</div>
@@ -93,7 +93,7 @@
 					<span class="seed">
 						<%= t.seed if t != nil %>
 					</span>
-					<span class="team-name">
+					<span class="team-name" style="<%= if p.any? then 'color: ' + p.first.color end %>">
 						<%= t.name if t != nil %>
 					</span>
 				</div>
@@ -105,7 +105,7 @@
 					<span class="seed">
 						<%= t.seed if t != nil %>
 					</span>
-					<span class="team-name">
+					<span class="team-name" style="<%= if p.any? then 'color: ' + p.first.color end %>">
 						<%= t.name if t != nil %>
 					</span>
 				</div>
@@ -121,7 +121,7 @@
 						<span class="seed">
 							<%= t.seed if t != nil %>
 						</span>
-						<span class="team-name">
+						<span class="team-name" style="<%= if p.any? then 'color: ' + p.first.color end %>">
 							<%= t.name if t != nil %>
 						</span>
 					</div>
