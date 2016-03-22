@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160312042447) do
+ActiveRecord::Schema.define(:version => 20160322042541) do
 
   create_table "brackets", :force => true do |t|
     t.integer  "score"
@@ -66,6 +66,8 @@ ActiveRecord::Schema.define(:version => 20160312042447) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "name"
+    t.string   "charity"
     t.string   "invitation_token"
     t.datetime "invitation_created_at"
     t.datetime "invitation_sent_at"
@@ -75,8 +77,6 @@ ActiveRecord::Schema.define(:version => 20160312042447) do
     t.string   "invited_by_type"
     t.integer  "invitations_count",      :default => 0
     t.integer  "invites",                :default => 0,  :null => false
-    t.string   "name"
-    t.string   "charity"
     t.integer  "referral_code",                          :null => false
     t.integer  "referred",               :default => 0,  :null => false
     t.integer  "paid",                   :default => 0,  :null => false
