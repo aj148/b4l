@@ -13,67 +13,15 @@
 					</tr>
 					</thead>
 					<tbody>
+						<%  Bracket.order('score DESC').first(10).each_with_index do |b, i| %>
+						<%  curr_usr = User.find(b.user_id) %>
 						<tr>
-							<td class="leaderboard-number"><strong>1</strong></td>
-							<td>Gainz</td>
-							<td>Gainz</td>
-							<td><strong>69</strong></td>
+							<td class="leaderboard-number"><strong><%= i+1 %></strong></td>
+							<td><%= b.name %></td>
+							<td><%= curr_user.charity %></td>
+							<td><strong><%= b.score %></strong></td>
 						</tr>
-						<tr>
-							<td class="leaderboard-number"><strong>2</strong></td>
-							<td>Gainz</td>
-							<td>Gainz</td>
-							<td><strong>69</strong></td>
-						</tr>
-						<tr>
-							<td class="leaderboard-number"><strong>3</strong></td>
-							<td>Gainz</td>
-							<td>Gainz</td>
-							<td><strong>69</strong></td>
-						</tr>
-						<tr>
-							<td class="leaderboard-number"><strong>4</strong></td>
-							<td>Gainz</td>
-							<td>Gainz</td>
-							<td><strong>69</strong></td>
-						</tr>
-						<tr>
-							<td class="leaderboard-number"><strong>5</strong></td>
-							<td>Gainz</td>
-							<td>Gainz</td>
-							<td><strong>69</strong></td>
-						</tr>
-						<tr>
-							<td class="leaderboard-number"><strong>6</strong></td>
-							<td>Gainz</td>
-							<td>Gainz</td>
-							<td><strong>69</strong></td>
-						</tr>
-						<tr>
-							<td class="leaderboard-number"><strong>7</strong></td>
-							<td>Gainz</td>
-							<td>Gainz</td>
-							<td><strong>69</strong></td>
-						</tr>
-						<tr>
-							<td class="leaderboard-number"><strong>8</strong></td>
-							<td>Gainz</td>
-							<td>Gainz</td>
-							<td><strong>69</strong></td>
-						</tr>
-						<tr>
-							<td class="leaderboard-number"><strong>9</strong></td>
-							<td>Gainz</td>
-							<td>Gainz</td>
-							<td><strong>69</strong></td>
-						</tr>
-						<tr>
-							<td class="leaderboard-number"><strong>10</strong></td>
-							<td>Gainz</td>
-							<td>Gainz</td>
-							<td><strong>69</strong></td>
-						</tr>
-
+						<% end %>
 				</table>
 			</div>
 	</div>
