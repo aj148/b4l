@@ -7,7 +7,8 @@
 					<thead>
 					<tr>
 						<th class="leaderboard-head"></th>
-						<th class="leaderboard-head">Name</th>
+						<th class="leaderboard-head">Username</th>
+						<th class="leaderboard-head">Bracket Name</th>
 						<th class="leaderboard-head">Charity</th>
 						<th class="leaderboard-head">Score</th>
 					</tr>
@@ -17,6 +18,7 @@
 						<%  curr_usr = User.find(b.user_id) %>
 						<tr>
 							<td class="leaderboard-number"><strong><%= i+1 %></strong></td>
+							<td><%= curr_usr.email%></td>
 							<td><%= b.name %></td>
 							<td><%= curr_usr.charity %></td>
 							<td><strong><%= b.score %></strong></td>
@@ -25,3 +27,4 @@
 				</table>
 			</div>
 	</div>
+
