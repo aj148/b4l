@@ -1,4 +1,4 @@
-class UpdateGames < ActiveRecord::Migration
+class UpdateGamesRoundTwo < ActiveRecord::Migration
 	def up
 		# # round 1
 		# Game.find_by_slot(0).update_attributes(:team1_score => 100, :team2_score => 0) #KU W austin
