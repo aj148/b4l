@@ -58,28 +58,28 @@ class UpdateGames < ActiveRecord::Migration
 		Game.create(:slot => 46, :team1 => Team.find_by_slot(57), :team2 => Team.find_by_slot(58), :team1_score => 100, :team2_score => 0) #Gonz W Utah
 		Game.create(:slot => 47, :team1 => Team.find_by_slot(61), :team2 => Team.find_by_slot(63), :team1_score => 100, :team2_score => 0) #Syr W Mid. Tenn
 	
-		# sweet 16
-		Game.create(:slot => 48, :team1 => Team.find_by_slot(0), :team2 => Team.find_by_slot(4), :team1_score => 100, :team2_score => 0) #KU W Maryland
-		Game.create(:slot => 49, :team1 => Team.find_by_slot(10), :team2 => Team.find_by_slot(14), :team1_score => 0, :team2_score => 100) #Miami L Vill
+		# # sweet 16
+		# Game.create(:slot => 48, :team1 => Team.find_by_slot(0), :team2 => Team.find_by_slot(4), :team1_score => 100, :team2_score => 0) #KU W Maryland
+		# Game.create(:slot => 49, :team1 => Team.find_by_slot(10), :team2 => Team.find_by_slot(14), :team1_score => 0, :team2_score => 100) #Miami L Vill
 
-		Game.create(:slot => 50, :team1 => Team.find_by_slot(16), :team2 => Team.find_by_slot(22), :team1_score => 100, :team2_score => 0) #Ore W Duke
-		Game.create(:slot => 51, :team1 => Team.find_by_slot(26), :team2 => Team.find_by_slot(30), :team1_score => 0, :team2_score => 100) #TAM L OU
+		# Game.create(:slot => 50, :team1 => Team.find_by_slot(16), :team2 => Team.find_by_slot(22), :team1_score => 100, :team2_score => 0) #Ore W Duke
+		# Game.create(:slot => 51, :team1 => Team.find_by_slot(26), :team2 => Team.find_by_slot(30), :team1_score => 0, :team2_score => 100) #TAM L OU
 		
-		Game.create(:slot => 52, :team1 => Team.find_by_slot(32), :team2 => Team.find_by_slot(36), :team1_score => 100, :team2_score => 0) #UNC W IU
-		Game.create(:slot => 53, :team1 => Team.find_by_slot(40), :team2 => Team.find_by_slot(44), :team1_score => 100, :team2_score => 0) #ND W Wisc
+		# Game.create(:slot => 52, :team1 => Team.find_by_slot(32), :team2 => Team.find_by_slot(36), :team1_score => 100, :team2_score => 0) #UNC W IU
+		# Game.create(:slot => 53, :team1 => Team.find_by_slot(40), :team2 => Team.find_by_slot(44), :team1_score => 100, :team2_score => 0) #ND W Wisc
 		
-		Game.create(:slot => 54, :team1 => Team.find_by_slot(48), :team2 => Team.find_by_slot(54), :team1_score => 100, :team2_score => 0) #UVA W ISU
-		Game.create(:slot => 55, :team1 => Team.find_by_slot(57), :team2 => Team.find_by_slot(61), :team1_score => 0, :team2_score => 100) #Gonz L Syr
+		# Game.create(:slot => 54, :team1 => Team.find_by_slot(48), :team2 => Team.find_by_slot(54), :team1_score => 100, :team2_score => 0) #UVA W ISU
+		# Game.create(:slot => 55, :team1 => Team.find_by_slot(57), :team2 => Team.find_by_slot(61), :team1_score => 0, :team2_score => 100) #Gonz L Syr
 	
-		# elite 8
-		Game.create(:slot => 56, :team1 => Team.find_by_slot(0), :team2 => Team.find_by_slot(14), :team1_score => 0, :team2_score => 100) #KU L Vill.
-		Game.create(:slot => 57, :team1 => Team.find_by_slot(16), :team2 => Team.find_by_slot(30), :team1_score => 0, :team2_score => 100) #Ore L OU
-		Game.create(:slot => 58, :team1 => Team.find_by_slot(32), :team2 => Team.find_by_slot(40), :team1_score => 100, :team2_score => 0) #UNC W ND 
-		Game.create(:slot => 59, :team1 => Team.find_by_slot(48), :team2 => Team.find_by_slot(61), :team1_score => 0, :team2_score => 100) #UVA L Syr
+		# # elite 8
+		# Game.create(:slot => 56, :team1 => Team.find_by_slot(0), :team2 => Team.find_by_slot(14), :team1_score => 0, :team2_score => 100) #KU L Vill.
+		# Game.create(:slot => 57, :team1 => Team.find_by_slot(16), :team2 => Team.find_by_slot(30), :team1_score => 0, :team2_score => 100) #Ore L OU
+		# Game.create(:slot => 58, :team1 => Team.find_by_slot(32), :team2 => Team.find_by_slot(40), :team1_score => 100, :team2_score => 0) #UNC W ND 
+		# Game.create(:slot => 59, :team1 => Team.find_by_slot(48), :team2 => Team.find_by_slot(61), :team1_score => 0, :team2_score => 100) #UVA L Syr
 
 		# #final 4
-		# Game.create(:slot => 60, :team1 => Team.find_by_slot(14), :team2 => Team.find_by_slot(30), :team1_score => 0, :team2_score => 100) #KU L Vill.
-		# Game.create(:slot => 61, :team1 => Team.find_by_slot(32), :team2 => Team.find_by_slot(61), :team1_score => 0, :team2_score => 100) #Ore L OU
+		# Game.create(:slot => 60, :team1 => Team.find_by_slot(14), :team2 => Team.find_by_slot(30), :team1_score => 0, :team2_score => 100) #Vill. L OU
+		# Game.create(:slot => 61, :team1 => Team.find_by_slot(32), :team2 => Team.find_by_slot(61), :team1_score => 0, :team2_score => 100) #UNC L Syr
 		
 		# #Title game
 		# Game.create(:slot => 62, :team1 => Team.find_by_slot(16), :team2 => Team.find_by_slot(30), :team1_score => 0, :team2_score => 100) #Ore L OU
